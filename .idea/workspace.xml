@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f1e9276-e69c-47a7-8095-c30268be052c" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/portalsemilla.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portalsemilla.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+    <list default="true" id="1f1e9276-e69c-47a7-8095-c30268be052c" name="Default Changelist" comment="act">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,10 +154,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -158,7 +177,8 @@
       <updated>1597260870883</updated>
       <workItem from="1597260873755" duration="2614000" />
       <workItem from="1597329492268" duration="540000" />
-      <workItem from="1597350064484" duration="1455000" />
+      <workItem from="1597350064484" duration="2095000" />
+      <workItem from="1597355951985" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1597261300152</created>
@@ -167,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597261300152</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="act">
+      <created>1597355216016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597355216016</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,15 +210,26 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="act" />
+    <option name="LAST_COMMIT_MESSAGE" value="act" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1597261316148">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="1789" y="-101" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597356155233">
+      <screen x="1280" y="-280" width="1920" height="1080" />
     </state>
+    <state x="1789" y="-101" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597356155233" />
+    <state x="1761" y="-131" key="SettingsEditor" timestamp="1597355889068">
+      <screen x="1280" y="-280" width="1920" height="1080" />
+    </state>
+    <state x="1761" y="-131" key="SettingsEditor/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597355889068" />
+    <state x="1707" y="-52" key="Vcs.Push.Dialog.v2" timestamp="1597355227172">
+      <screen x="1280" y="-280" width="1920" height="1080" />
+    </state>
+    <state x="1707" y="-52" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597355227172" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597261316148" />
     <state x="542" y="340" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597260947230">
       <screen x="0" y="23" width="1440" height="833" />
