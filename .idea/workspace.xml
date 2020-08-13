@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f1e9276-e69c-47a7-8095-c30268be052c" name="Default Changelist" comment="act">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1f1e9276-e69c-47a7-8095-c30268be052c" name="Default Changelist" comment="empezamos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +176,7 @@
       <workItem from="1597260873755" duration="2614000" />
       <workItem from="1597329492268" duration="540000" />
       <workItem from="1597350064484" duration="2095000" />
-      <workItem from="1597355951985" duration="168000" />
+      <workItem from="1597355951985" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1597261300152</created>
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597355216016</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="empezamos">
+      <created>1597356312126</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597356312126</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +220,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="act" />
-    <option name="LAST_COMMIT_MESSAGE" value="act" />
+    <MESSAGE value="empezamos" />
+    <option name="LAST_COMMIT_MESSAGE" value="empezamos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1789" y="-101" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597356155233">
@@ -226,11 +232,15 @@
       <screen x="1280" y="-280" width="1920" height="1080" />
     </state>
     <state x="1761" y="-131" key="SettingsEditor/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597355889068" />
-    <state x="1707" y="-52" key="Vcs.Push.Dialog.v2" timestamp="1597355227172">
+    <state x="1707" y="-52" key="Vcs.Push.Dialog.v2" timestamp="1597356369141">
       <screen x="1280" y="-280" width="1920" height="1080" />
     </state>
-    <state x="1707" y="-52" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597355227172" />
+    <state x="1707" y="-52" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597356369141" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597261316148" />
+    <state x="2053" y="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597356213525">
+      <screen x="1280" y="-280" width="1920" height="1080" />
+    </state>
+    <state x="2053" y="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800/1280.-280.1920.1080@1280.-280.1920.1080" timestamp="1597356213525" />
     <state x="542" y="340" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597260947230">
       <screen x="0" y="23" width="1440" height="833" />
     </state>
