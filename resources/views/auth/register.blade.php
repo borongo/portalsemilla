@@ -38,7 +38,20 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Rut') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="rut" type="text" class="form-control " name="rut"  required autocomplete="rut">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Escuela') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="rut" type="text" class="form-control " name="escuela"  required autocomplete="escuela">
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

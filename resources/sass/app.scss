@@ -6,3 +6,846 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.class1 {
+    background-color: lightgray;
+}
+
+.img-card {
+    background-color: lightgray;
+}
+
+.bg2 {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1920px 2500px;
+    padding-top: 404px;
+    margin-left: auto;
+    margin-right: auto;
+    background-attachment: scroll;
+    overflow: scroll;
+}
+
+.bg3 {
+    background-image: url("../img/background2.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 1920px 4537px;
+    margin-right: auto;
+    background-attachment: scroll;
+    overflow: scroll;
+}
+
+.bg4 {
+    background-image: url("../img/background2.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    margin-right: auto;
+    margin-top:-6%;
+    background-attachment: scroll;
+    overflow: auto;
+}
+.navbar{
+    background-color:#00000054!important;
+}
+
+.sep {
+    height: 10px;
+    width: 122px;
+    margin-top: 1px;
+}
+
+.sep2 {
+    height: 4px;
+}
+
+.card-us {
+    background-color: rgba(245, 245, 245, 0.0);
+    z-index: 50;
+}
+
+.card-s {
+    margin-bottom: 25px;
+    z-index: 25;
+}
+
+.sup {
+    padding-left: 38px;
+    padding-right: 38px;
+    width: 1053px;
+}
+
+.contenedor {
+    height: 680px;
+    width: 1053px;
+}
+
+
+
+.contenedor-icons {
+    border-radius: 2em;
+    height: 75px;
+    width: 298px;
+    padding-left: 0%;
+}
+
+.icons-pos {
+    margin-top: 16px;
+    margin-left: 25px;
+}
+
+.tam {
+    height: 2500px;
+    width: 1290px;
+}
+
+.tam2 {
+    height: 4557px;
+    width: 1290px;
+}
+
+
+
+.name {
+    font-size: 28px;
+    font-family: "Open Sans";
+    color: rgb(35, 35, 35);
+    font-weight: bold;
+    margin-right: 49px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.porcent {
+    font-size: 30px;
+    font-family: "Open Sans";
+    color: rgb(35, 35, 35);
+    font-weight: bold;
+    margin-top: 25px;
+    align-items: initial;
+    margin-right: 167px;
+}
+
+.sep-name {
+    margin-left: 38px;
+}
+
+.med-prin {
+    margin-top: 30px;
+    background-color: #ffffff05;
+    margin-right: 195px;
+    width: 267px;
+    height: 138px;
+    border-radius: 2em;
+}
+
+.content-central {
+    height: 681px;
+    width: 1053px;
+    border-radius: 2em;
+    background-color: #8cd3c3;
+}
+
+.content-central-avatar-cofres {
+    height: 80px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(255, 255, 255);
+    margin-top: 75px;
+    margin-left: -12px;
+}
+
+.sep-cont {
+    margin-bottom: 21px;
+}
+
+.content-card {
+    padding-left: 38px;
+    padding-top: 8px;
+}
+
+.Nick_Name {
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.Nick_Name_img {
+    height: 75px;
+    width: 75px;
+}
+
+.Nick_Name_progress {
+    height: 8px;
+    width: 76px;
+    margin-top: 10px;
+}
+
+.menu_progress {
+    height: 5px;
+    margin-top: 15px;
+}
+
+.Nick_Name_porcent {
+    font-size: 10px;
+    font-family: "Open Sans";
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.medallas {
+    margin-right: 10px;
+}
+
+.encima {
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    top: 180px;
+    left: 150px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+
+.encima-cofre1 {
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    top: 180px;
+    left: -50px;
+    z-index: 1;
+}
+
+.margen-title-avatar {
+    padding-top: 404px;
+    margin-left: 300px;
+    font-size: 25px;
+    font-family: "Open Sans";
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+}
+
+.cont-cofre1 {
+    background-image: url("../img/dani_computador_color.png");
+    background-repeat: no-repeat;
+    background-position: -70px -80px;
+    background-size: 700px;
+    margin-top: 75px;
+    margin-left: 180px;
+    height: 460px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.cont-cofre2 {
+    background-image: url("../img/peter_tablet_color.png");
+    background-repeat: no-repeat;
+    background-position: -100px -80px;
+    background-size: 700px;
+    margin-top: 75px;
+    margin-left: 180px;
+    height: 460px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.cont-cofre3 {
+    background-image: url("../img/gabriela_libro_color.png");
+    background-repeat: no-repeat;
+    background-position: -80px -90px;
+    background-size: 700px;
+    margin-top: 75px;
+    margin-left: -12px;
+    height: 460px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.historial1 {
+    margin-top: 20px;
+    height: 1136px;
+    width: 600px;
+    background-color: rgb(111, 131, 234);
+    border-radius: 2em;
+    margin-right: 20px;
+}
+
+.historial2 {
+    margin-top: 20px;
+    height: 1136px;
+    width: 600px;
+    background-color: rgb(23, 119, 188);
+    border-radius: 2em;
+    margin-left: 20px;
+}
+
+.content-historial {
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255, 0.0);
+    margin-right: 195px;
+    width: 1230px;
+    height: 138px;
+    margin-left: -12px;
+}
+
+.cofre1-iconos {
+    margin-top: -20px;
+    margin-left: 450px;
+    height: 400px;
+    width: 400px;
+}
+
+.sep-icons-cofre1 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 90px;
+}
+
+.cofrename-inicio {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(34, 34, 34);
+    font-weight: bold;
+}
+
+.Logro {
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: rgb(41, 41, 41);
+}
+
+.upe {
+    z-index: 45;
+}
+
+.mejores {
+    width: 977px;
+    height: 200px;
+    padding-top: 10px;
+    margin-left: 20px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(250, 234, 146);
+    position: absolute;
+}
+
+.fondo-logro-video {
+    background-color: rgb(200, 154, 55);
+}
+
+.fondo-logro-juego {
+    background-color: rgb(111, 131, 234);
+}
+
+.fondo-logro-copa {
+    background-color: rgb(242, 123, 95);
+}
+
+.fondo-logro-blog {
+    background-color: rgb(19, 117, 187);
+}
+
+.Cofres {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+}
+
+.name-muro {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: rgb(41, 41, 41);
+}
+
+.circulo-video {
+    width: 47px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 40px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(200, 154, 55);
+}
+
+.circulo-desafio {
+    width: 47px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 40px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(111, 131, 234);
+}
+
+.circulo-juego {
+    width: 47px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 40px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(242, 123, 95);
+}
+
+.punteados {
+    width: 47px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 40px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(242, 123, 95, 0.0);
+    border-style: dashed;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+    border-radius: 50%;
+}
+
+.Elipse_11_copia_10 {
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+    border-style: dashed;
+    border-radius: 50%;
+    position: absolute;
+    left: 1045px;
+    top: 1523px;
+    width: 46px;
+    height: 46px;
+    z-index: 158;
+}
+
+.circulo-blogs {
+    width: 47px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 40px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(19, 117, 187);
+}
+
+.Cofre_1 {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(41, 41, 41);
+}
+
+.historial1-nav {
+    padding-left: 50px;
+}
+
+.historial-text {
+    font-size: 13px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    line-height: 1.846;
+    text-align: Left;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.historial-link {
+    margin-top: 10px;
+    margin-right: 253px;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(35, 35, 35);
+}
+
+.fecha-public {
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.divisor {
+    margin-left: 20px;
+    border-width: 1px;
+    border-color: rgb(77, 99, 214);
+    border-style: solid;
+    width: 496px;
+    height: 0;
+    z-index: 444;
+}
+
+.divisor2 {
+    margin-left: 20px;
+    border-width: 1px;
+    border-color: rgb(11, 84, 137);
+    border-style: solid;
+    width: 496px;
+    height: 0;
+    z-index: 409;
+}
+
+menu-st {
+    margin-top: 480px;
+}
+
+.cont-vidt {
+    background-image: url("../img/Peter_cara.png");
+    background-repeat: no-repeat;
+    background-position: -80px -90px;
+    background-size: 500px;
+    margin-top: -530px;
+    margin-left: 355px;
+    height: 278px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(200, 154, 55);
+    z-index: 4;
+}
+
+.cont-desafi {
+    background-image: url("../img/dani_cara.png");
+    background-repeat: no-repeat;
+    background-position: -90px -80px;
+    background-size: 500px;
+    margin-top: -530px;
+    margin-left: 355px;
+    height: 278px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(111, 131, 234);
+    z-index: 4;
+}
+
+.cont-blog11 {
+    background-image: url("../img/gabriela_cara_manitos.png");
+    background-repeat: no-repeat;
+    background-position: -20px -80px;
+    background-size: 450px;
+    height: 278px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(19, 117, 187);
+    z-index: 4;
+}
+
+.cont-desa1 {
+    margin-top: 35px;
+    margin-left: 355px;
+    height: 495px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(111, 131, 234);
+    z-index: 4;
+}
+
+.cont-blog1 {
+    margin-top: 35px;
+    margin-left: 355px;
+    height: 495px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(19, 117, 187);
+    z-index: 4;
+}
+
+.cont-blog1-dest {
+    margin-top: 6%;
+    margin-bottom: 500px;
+    height: 8%;
+    border-radius: 2em;
+    background-color: rgb(30, 173, 255);
+    z-index: 4;
+}
+.publish-button{
+    margin-top: 7%;
+    margin-right: 4%;
+}
+.cont-blog-pub {
+    margin-top: 35px;
+    height: 63px;
+    border-radius: 2em;
+    background-color: rgb(255, 255, 255);
+}
+
+.cont-vid1 {
+    margin-top: 35px;
+    margin-left: 355px;
+    height: 495px;
+    width: 1211px;
+    border-radius: 2em;
+    background-color: rgb(200, 154, 55);
+    z-index: 4;
+}
+
+.video-inter {
+
+    margin-left: 32%;
+}
+
+.Actividad-titulo {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: justifyLeft;
+}
+
+.Actividad-titulo-text {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    line-height: 1.875;
+    text-align: justify;
+    height: 138px;
+    width: 717px;
+    margin-top: -10px;
+}
+
+.videos-title-menu {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(200, 154, 55);
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.porcentaje-tv {
+    font-size: 24px;
+    font-family: "Open Sans";
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    line-height: 0.667;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Desafios {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(206, 206, 206);
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.encima-video1 {
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    top: 7rem;
+    left: -50px;
+    z-index: 1;
+}
+
+.contenido-vid-der {
+    margin-top: 40px;
+    margin-left: 80px;
+    height: 400px;
+    width: 702px;
+}
+
+.num-vid {
+    font-size: 46px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    line-height: 0.652;
+    text-align: center;
+    z-index: 439;
+}
+
+.numconte {
+    width: 300;
+    padding-top: 90px;
+}
+
+.desaconte {
+    width: 930px;
+    padding-top: 90px;
+}
+
+.desaconte-blog {
+    width: 930px;
+    padding-top: 90px;
+    margin-left: 85px;
+    z-index: 40;
+}
+
+.circulo-vid {
+    width: 100px;
+    height: 100px;
+    padding-top: 35px;
+    margin-left: 35px;
+    z-index: 3;
+    text-align: center;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(242, 123, 95, 0.0);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+.tt-video {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: -60px;
+    width: 285px;
+}
+
+.ttt-video {
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    width: 285px;
+    margin-left: -60px;
+}
+
+.ttt-video-desa {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: justify;
+    width: 950px;
+    margin-top: -20px;
+}
+
+.Publicar {
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: rgb(255, 254, 254);
+    font-weight: bold;
+    line-height: 1.667;
+    text-align: center;
+}
+
+.Publicarblog {
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: rgb(48, 46, 46);
+    font-weight: bold;
+    line-height: 1.667;
+    text-align: center;
+}
+
+.circulo-des-boton {
+    width: 132px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 0px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(128, 149, 255);
+}
+
+.circulo-des-boton-blog {
+    width: 162px;
+    height: 47px;
+    padding-top: 10px;
+    margin-left: 0px;
+    z-index: 1;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: rgb(236, 236, 236);
+}
+
+.megusta-blog {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.0;
+}
+
+.comentario_blog {
+    border-radius: 50px;
+    background-color: rgb(221, 221, 221);
+    position: absolute;
+
+}
+
+.comentario_blog1 {
+    border-radius: 50px;
+    background-color: rgb(221, 221, 221);
+    position: absolute;
+    margin-top: 200px;
+    margin-left: -15px;
+    width: 1211px;
+    z-index: -2;
+}
+
+.comentarioint1 {
+    border-radius: 50px;
+    background-color: rgb(242, 241, 241);
+    position: absolute;
+    width: 1061px;
+    margin-top: 10px;
+}
+
+.separatorint {
+    margin-top: 120px;
+}
+
+.retorno {
+    border-radius: 50px;
+    background-color: rgb(221, 221, 221, 0.0);
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 50PX;
+    width: 1400px;
+    height: 200px;
+    z-index: 999;
+}
+
+.retornoblog {
+    border-radius: 50px;
+    background-color: rgb(221, 221, 221, 0.0);
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -350PX;
+    width: 1400px;
+    height: 200px;
+    z-index: 999;
+}
