@@ -10942,7 +10942,7 @@ a.text-dark:focus {
   margin-right: auto;
   margin-top: -6%;
   background-attachment: scroll;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .navbar {
@@ -11713,7 +11713,6 @@ menu-st {
 .comentarioint1 {
   border-radius: 50px;
   background-color: #f2f1f1;
-  position: absolute;
   width: 1061px;
   margin-top: 10px;
 }
