@@ -82,17 +82,17 @@
     <form method="post">
         <div class="form-group container justify-content-start d-flex flex-row border cont-blog-pub shadow">
             <input class="ml-2 mt-1 mb-1 border-0" style="width:1155px" type="text" name="posteo">
-            <div class="publish-button" :click="hola">
+            <div class="publish-button">
                 <button class="btn circulo-des-boton-blog Publicarblog" type="submit" value="">Publicar</button>
 
             </div>
         </div>
 
 
-        <input id="usr" name="usr" type="hidden" v-bind="posts.messa">
+        <input id="usr" name="usr" type="hidden">
     </form>
     <!---  inicio post -->
-   <publication ></publication>
+   <publication v-for="post in this.parsedPost" :key="post.id" v-bind:post='post' ></publication>
 
     </div>
 
@@ -101,14 +101,20 @@
     import publication from "./publication"
     export default {
         name: "index",
-        props:['posts'],
+        props:['posts','user'],
         components:{
             publication
         },
-        methods:{
-            hola(){
-
+        data(){
+            return{
+                parsedPost:undefined
             }
+        },
+        created() {
+            this.parsedPost=JSON.parse(this.posts).data;
+        },
+        methods:{
+
         }
 
     }

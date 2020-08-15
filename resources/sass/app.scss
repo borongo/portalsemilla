@@ -45,7 +45,7 @@
     margin-right: auto;
     margin-top:-6%;
     background-attachment: scroll;
-    overflow: auto;
+    overflow: hidden;
 }
 .navbar{
     background-color:#00000054!important;
@@ -819,7 +819,6 @@ menu-st {
 .comentarioint1 {
     border-radius: 50px;
     background-color: rgb(242, 241, 241);
-    position: absolute;
     width: 1061px;
     margin-top: 10px;
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PostsUser extends Migration
+class CommentsPost extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class PostsUser extends Migration
      */
     public function up()
     {
-        Schema::create('posts_user', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_user')->unsigned();
             $table->bigInteger('id_post')->unsigned();
-            $table->tinyInteger('pin_post')->unsigned()->default(0);
-            $table->tinyInteger('like_post')->unsigned()->default(0);
+            $table->bigInteger('id_user')->unsigned();
+            $table->text('comment');
+            $table->tinyInteger('edited')->unsigned()->default(0);
+            $table->bigInteger('likes')->unsigned()->default(0);
             $table->timestamps();
-            $table->unique(['id_user', 'id_post']);
             $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_post')->references('id')->on('post');
-
-
         });
     }
 
@@ -36,6 +34,6 @@ class PostsUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts_user');
+        Schema::dropIfExists('comments');
     }
 }

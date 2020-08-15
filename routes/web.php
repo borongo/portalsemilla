@@ -18,10 +18,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::resource('posts',"PostController")->middleware(['auth']);
+Route::resource('posts',"PostController");
+Route::resource('comments',"CommentsController");
+Route::match(['POST','PATCH'],'like','PostController@like')->middleware(['auth']);
+Route::match(['POST','PATCH'],'pin','PostController@pin')->middleware(['auth']);
 Route::resource('desafio','DesafioController')->middleware(['auth']);
 Route::resource('muro',"MuroController")->middleware(['auth']);
-Route::get('/home/', 'HomeController@index')->name('home');
-Route::group('a', function (){
+Route::get('/home', 'HomeController@index')->name('home');
 
-});

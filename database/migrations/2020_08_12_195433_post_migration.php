@@ -15,7 +15,9 @@ class PostMigration extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->id();
-            $table->string('messa',255);
+            $table->bigInteger('id_user')->unsigned();
+            $table->string('title',255);
+            $table->string('body',255);
             $table->bigInteger('likes')->unsigned();
             $table->timestamps();
         });

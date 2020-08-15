@@ -37,7 +37,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function posts(){
-        $this->belongsToMany(Post::class,'posts_user','id_user','id_post');
-    }
+
 }
