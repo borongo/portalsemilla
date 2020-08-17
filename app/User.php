@@ -15,6 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table ="user";
     protected $fillable = [
         'name', 'email', 'password',"rut","school","name_avatar","img_avatar","instagram","avance"
     ];
@@ -25,7 +26,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','id_user'
     ];
 
     /**
@@ -38,7 +39,10 @@ class User extends Authenticatable
     ];
 
     public function post(){
-        $this->hasMany(Post::class,'id_post');
+       return $this->hasMany(Post::class,'id_post');
+    }
+    public function desafios(){
+        return $this->belongsToMany(Desafio::class,'avance','id_user','id_desafio');
     }
 
 }

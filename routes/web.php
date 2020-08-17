@@ -25,4 +25,6 @@ Route::match(['POST','PATCH'],'pin','PostController@pin')->middleware(['auth']);
 Route::resource('desafio','DesafioController')->middleware(['auth']);
 Route::resource('muro',"MuroController")->middleware(['auth']);
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::resource('muro',"MuroController");
+Route::resource('desafio','DesafioController')->middleware(['auth']);
+Route::get("insdesafio","DesafioController@indDesafio")->middleware(['auth']);

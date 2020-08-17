@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Muro;
+use App\User;
 use Illuminate\Http\Request;
 
 class MuroController extends Controller
@@ -10,11 +11,11 @@ class MuroController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
      */
     public function index()
     {
-        //
+        return User::with(['desafios'])->get();
     }
 
     /**
@@ -42,11 +43,11 @@ class MuroController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Muro  $muro
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model
      */
-    public function show(Muro $muro)
+    public function show($id)
     {
-        //
+        return User::with(['desafios'])->find(102);
     }
 
     /**

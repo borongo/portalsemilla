@@ -2122,17 +2122,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2339,6 +2328,190 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.editable = true;
       this.postNewContent = this.postEdit.body;
       this.editPost = !this.editPost;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/desafio/index.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/desafio/index.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "index",
+  props: ['insta'],
+  data: function data() {
+    return {
+      desafios: [{
+        id: 19,
+        n_cofre: 1,
+        n_desafio: 1,
+        nombre: "",
+        tipo: "",
+        link: ""
+      }, {
+        id: 20,
+        n_cofre: 1,
+        n_desafio: 2,
+        nombre: "",
+        tipo: "",
+        link: ""
+      }, {
+        id: 21,
+        n_cofre: 1,
+        n_desafio: 3,
+        nombre: "",
+        tipo: "",
+        link: ""
+      }]
+    };
+  },
+  created: function created() {
+    this.getDesafio();
+  },
+  methods: {
+    getDesafio: function getDesafio() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/insdesafio").then(function (res) {
+        _this.desafios = res.data;
+        _this.usr = res.data;
+      });
+    },
+    validarinsta: function validarinsta(desafio) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/desafio", _objectSpread({}, this.desafios)).then(function (res) {
+        console.log(res.data.instagram);
+      });
     }
   }
 });
@@ -38898,9 +39071,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "index.php?pagina=inicio&npag=1" } }, [
-      _c("div", { staticClass: "retornoblog" })
-    ])
+    return _c(
+      "a",
+      {
+        attrs: {
+          href: "http://portal.portalsemilla.com/index.php?pagina=inicio&npag=1"
+        }
+      },
+      [_c("div", { staticClass: "retornoblog" })]
+    )
   },
   function() {
     var _vm = this
@@ -38921,16 +39100,24 @@ var staticRenderFns = [
               staticStyle: { width: "6rem", "border-radius": "2em" }
             },
             [
-              _c("a", { attrs: { href: "?pagina=videos" } }, [
-                _c(
-                  "h6",
-                  {
-                    staticClass: "text-center Nick_Name videos-title-menu ",
-                    staticStyle: { color: "rgb(206, 206, 206)" }
-                  },
-                  [_vm._v("Videos")]
-                )
-              ]),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "http://portal.portalsemilla.com/?pagina=videos"
+                  }
+                },
+                [
+                  _c(
+                    "h6",
+                    {
+                      staticClass: "text-center Nick_Name videos-title-menu ",
+                      staticStyle: { color: "rgb(206, 206, 206)" }
+                    },
+                    [_vm._v("Videos")]
+                  )
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
@@ -38974,16 +39161,24 @@ var staticRenderFns = [
               }
             },
             [
-              _c("a", { attrs: { href: "?pagina=desafio" } }, [
-                _c(
-                  "h6",
-                  {
-                    staticClass: "text-center Nick_Name",
-                    staticStyle: { color: "rgb(206, 206, 206)" }
-                  },
-                  [_vm._v("Desafios")]
-                )
-              ]),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "http://portal.portalsemilla.com/?pagina=desafio"
+                  }
+                },
+                [
+                  _c(
+                    "h6",
+                    {
+                      staticClass: "text-center Nick_Name",
+                      staticStyle: { color: "rgb(206, 206, 206)" }
+                    },
+                    [_vm._v("Desafios")]
+                  )
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
@@ -39078,7 +39273,7 @@ var staticRenderFns = [
               }
             },
             [
-              _c("a", { attrs: { href: "?pagina=blog" } }, [
+              _c("a", { attrs: { href: "http://portalsemilla.com/posts" } }, [
                 _c(
                   "h6",
                   {
@@ -39363,6 +39558,525 @@ var staticRenderFns = [
           staticClass: "encima-video1 rounded-circle",
           attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
         })
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "bg4 tam3" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container justify-content-start d-flex flex-row border cont-desa1 "
+      },
+      [
+        _c("div", { staticClass: "mt-4  desaconte ml-5 pl-5 " }, [
+          _c("p", { staticClass: "tt-video" }, [_vm._v(" Link a Instagram")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus, recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos sequi tenetur quae accusamus, quidem ipsa."
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { name: "desafio19" } }, [
+            _c("img", { attrs: { src: _vm.desafios[0].link, alt: "" } })
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.desafios[0].link,
+                expression: "desafios[0].link"
+              }
+            ],
+            attrs: {
+              type: "text",
+              id: _vm.desafios[0].id,
+              name: _vm.desafios[0].nombre
+            },
+            domProps: { value: _vm.desafios[0].link },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.desafios[0], "link", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "d-flex justify-content-end align-items-end mb-5 mr-5 pr-4 Publicar ",
+            staticStyle: { "padding-top": "330" }
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "circulo-des-boton text-light",
+                on: {
+                  click: function($event) {
+                    return _vm.validarinsta(_vm.desafios[0])
+                  }
+                }
+              },
+              [_vm._v("Publicar")]
+            )
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container justify-content-start d-flex flex-row border cont-desa1 "
+      },
+      [
+        _c("div", { staticClass: "mt-4  desaconte ml-5 pl-5 " }, [
+          _c("p", { staticClass: "tt-video" }, [_vm._v(" Link a Instagram")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus, recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos sequi tenetur quae accusamus, quidem ipsa."
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { name: "desafio19" } }, [
+            _vm.desafios[1].link !== ""
+              ? _c("img", { attrs: { src: _vm.desafios[1].link, alt: "" } })
+              : _c("img", { attrs: { src: "public/images/per1.png", alt: "" } })
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.desafios[1].link,
+                expression: "desafios[1].link"
+              }
+            ],
+            attrs: {
+              type: "text",
+              id: _vm.desafios[1].id,
+              name: _vm.desafios[1].nombre
+            },
+            domProps: { value: _vm.desafios[1].link },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.desafios[1], "link", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "d-flex justify-content-end align-items-end mb-5 mr-5 pr-4 Publicar ",
+            staticStyle: { "padding-top": "330" }
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "circulo-des-boton text-light",
+                on: {
+                  click: function($event) {
+                    return _vm.validarinsta(_vm.desafios[1])
+                  }
+                }
+              },
+              [_vm._v("Publicar")]
+            )
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container justify-content-start d-flex flex-row border cont-desa1 "
+      },
+      [
+        _c("div", { staticClass: "mt-4  desaconte ml-5 pl-5 " }, [
+          _c("p", { staticClass: "tt-video" }, [_vm._v(" Link a Instagram")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus, recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos sequi tenetur quae accusamus, quidem ipsa."
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { name: "desafio19" } }, [
+            _vm.desafios[2].link !== ""
+              ? _c("img", { attrs: { src: _vm.desafios[2].link, alt: "" } })
+              : _c("img", { attrs: { src: "public/images/per1.png", alt: "" } })
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.desafios[0].link,
+                expression: "desafios[0].link"
+              }
+            ],
+            attrs: {
+              type: "text",
+              id: _vm.desafios[2].id,
+              name: _vm.desafios[2].nombre
+            },
+            domProps: { value: _vm.desafios[0].link },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.desafios[0], "link", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "d-flex justify-content-end align-items-end mb-5 mr-5 pr-4 Publicar ",
+            staticStyle: { "padding-top": "330" }
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "circulo-des-boton text-light",
+                on: {
+                  click: function($event) {
+                    return _vm.validarinsta(_vm.desafios[2])
+                  }
+                }
+              },
+              [_vm._v("Publicar")]
+            )
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "index.php?pagina=inicio&npag=1" } }, [
+      _c("div", { staticClass: "retornoblog" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "container-fluid contenedor-vid",
+        staticStyle: { "margin-top": "400px" }
+      },
+      [
+        _c("div", { staticClass: "d-flex justify-content-center menu-st" }, [
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: { width: "6rem", "border-radius": "2em" }
+            },
+            [
+              _c("a", { attrs: { href: "?pagina=videos" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name videos-title-menu ",
+                    staticStyle: { color: "rgb(206, 206, 206)" }
+                  },
+                  [_vm._v("Videos")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar ",
+                    staticStyle: {
+                      width: "10%",
+                      "background-color": "rgb(206, 206, 206)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "text-centert porcentaje-tv",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("50% ")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: {
+                width: "6rem",
+                "border-radius": "2em",
+                "margin-left": "130px"
+              }
+            },
+            [
+              _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name",
+                    staticStyle: { color: "rgb(111, 131, 234)" }
+                  },
+                  [_vm._v("Desafios")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar",
+                    staticStyle: {
+                      width: "23%",
+                      "background-color": "rgb(111, 131, 234)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-centert porcentaje-tv" }, [
+                _vm._v("70% ")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: {
+                width: "6rem",
+                "border-radius": "2em",
+                "margin-left": "130px"
+              }
+            },
+            [
+              _c(
+                "h6",
+                {
+                  staticClass: "text-center Nick_Name",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("Juegos")]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar  ",
+                    staticStyle: {
+                      width: "4%",
+                      "background-color": "rgb(206, 206, 206)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "text-centert porcentaje-tv",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("5% ")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: {
+                width: "6rem",
+                "border-radius": "2em",
+                "margin-left": "130px"
+              }
+            },
+            [
+              _c("a", { attrs: { href: "?pagina=blog" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name",
+                    staticStyle: { color: "rgb(206, 206, 206)" }
+                  },
+                  [_vm._v("Blog")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar  ",
+                    staticStyle: {
+                      width: "6%",
+                      "background-color": "rgb(206, 206, 206)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "text-centert porcentaje-tv",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("9% ")]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container text-center border cont-desafi  " },
+      [
+        _c("p", {
+          staticClass: "mt-4 ml-4 Cofre_1",
+          staticStyle: {
+            "margin-righ": "-40px",
+            "text-align": "initial !important"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "d-flex flex-column justify-content-start video-inter"
+          },
+          [
+            _c(
+              "div",
+              { staticClass: "d-flex  bd-highlight mt-5  Actividad-titulo" },
+              [_c("p", [_vm._v("Actividad")])]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "d-flex flex-column  Actividad-titulo-text" },
+              [
+                _c("p", [
+                  _vm._v(
+                    "Con el objetivo de ofrecer una experiencia lo más fiel posible a la realidad, ‘Dirt Rally 2.0’ aboga por los daños reales en los vehículos, así como unas físicas tremendamente exigentes. Una curva mal dada y veremos consecuencias en la\n                chapa, las ruedas o el motor. Un mal volantazo y veremos cómo nuestro automóvil queda totalmente inservible. Y sí, es posible recibir daños letales si lo habilitamos en opciones."
+                  )
+                ])
+              ]
+            )
+          ]
+        )
       ]
     )
   }
@@ -51639,6 +52353,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('index-blog', __webpack_require__(/*! ./components/blog/index.vue */ "./resources/js/components/blog/index.vue")["default"]);
+Vue.component('index-desafios', __webpack_require__(/*! ./components/desafio/index.vue */ "./resources/js/components/desafio/index.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -51967,6 +52682,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_publication_vue_vue_type_template_id_1634720a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_publication_vue_vue_type_template_id_1634720a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/desafio/index.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/desafio/index.vue ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=3c0741b6&scoped=true& */ "./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/js/components/desafio/index.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3c0741b6",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/desafio/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/desafio/index.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/desafio/index.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/desafio/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=3c0741b6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

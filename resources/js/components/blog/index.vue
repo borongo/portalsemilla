@@ -1,19 +1,12 @@
 <template>
-
     <div class="bg4 tam3 container-fluid">
-
-    <a href="index.php?pagina=inicio&npag=1">
+    <a href="http://portal.portalsemilla.com/index.php?pagina=inicio&npag=1">
         <div class="retornoblog"></div>
     </a>
-
-
     <div class="container-fluid contenedor-vid" style="margin-top :400px">
-
-
         <div class="d-flex justify-content-center">
-
             <div class="card justify-content-center border-0 card-us " style="width: 6rem; border-radius: 2em ">
-                <a href="?pagina=videos">
+                <a href="http://portal.portalsemilla.com/?pagina=videos">
                     <h6 class="text-center Nick_Name videos-title-menu " style="color: rgb(206, 206, 206);">Videos</h6>
                 </a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
@@ -23,10 +16,9 @@
                 </div>
                 <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">10% </p>
             </div>
-
             <div class="card justify-content-center border-0 card-us "
                  style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-                <a href="?pagina=desafio">
+                <a href="http://portal.portalsemilla.com/?pagina=desafio">
                     <h6 class="text-center Nick_Name" style="color: rgb(206, 206, 206);">Desafios</h6>
                 </a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
@@ -50,7 +42,7 @@
 
             <div class="card justify-content-center border-0 card-us "
                  style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-                <a href="?pagina=blog">
+                <a href="http://portalsemilla.com/posts">
                     <h6 class="text-center Nick_Name" style="color: rgb(19, 117, 187);">Blog</h6>
                 </a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
@@ -84,14 +76,11 @@
             <input class="ml-2 mt-1 mb-1 border-0" v-model="textPost" style="width:1155px" type="text" name="posteo">
             <div class="publish-button">
                 <button class="btn circulo-des-boton-blog Publicarblog" v-on:click="publicar" type="submit" value="">Publicar</button>
-
             </div>
         </div>
     <!---  inicio post -->
    <publication v-for="post in this.parsedPost" :key="post.id" v-bind:post='post' ></publication>
-
     </div>
-
 </template>
 <script>
     import publication from "./publication"

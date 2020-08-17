@@ -2,19 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Avance;
 use App\Desafio;
+use App\DesInsta;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DesafioController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
+    public function indDesafio(){
+        return DesInsta::where('id_user',Auth::id());
+    }
     public function index()
     {
-        //
+        $insta=DesInsta::where('id_user',Auth::id());
+        return view('desafios.index',compact('insta'));
     }
 
     /**
@@ -35,7 +43,12 @@ class DesafioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       Avance::create([
+            "id_desafio"=>$request->id,
+            "id_user"=>Auth::id()
+        ]);
+       $insta=DesInsta::create([ "id_desafio"=>$request->id,"id_user"=>Auth::id(),"link_insta"=>$request->link_insta]);
+       return $insta;
     }
 
     /**
@@ -44,9 +57,11 @@ class DesafioController extends Controller
      * @param  \App\Desafio  $desafio
      * @return \Illuminate\Http\Response
      */
-    public function show(Desafio $desafio)
+    public function show(  $id)
     {
-        //
+        $data=explode("-",$id);
+        return Desafio::where([['tipo',"=",$data[1]],["n_cofre","=",$data[0]]])->get();
+
     }
 
     /**
