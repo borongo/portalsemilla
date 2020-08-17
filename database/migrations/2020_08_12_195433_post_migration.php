@@ -16,9 +16,9 @@ class PostMigration extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_user')->unsigned();
-            $table->string('title',255);
+            $table->string('title',255)->nullable();
             $table->string('body',255);
-            $table->bigInteger('likes')->unsigned();
+            $table->bigInteger('likes')->unsigned()->default(0);
             $table->timestamps();
         });
     }

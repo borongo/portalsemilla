@@ -79,18 +79,14 @@
             </div>
         </div>
     </div>
-    <form method="post">
+
         <div class="form-group container justify-content-start d-flex flex-row border cont-blog-pub shadow">
-            <input class="ml-2 mt-1 mb-1 border-0" style="width:1155px" type="text" name="posteo">
+            <input class="ml-2 mt-1 mb-1 border-0" v-model="textPost" style="width:1155px" type="text" name="posteo">
             <div class="publish-button">
-                <button class="btn circulo-des-boton-blog Publicarblog" type="submit" value="">Publicar</button>
+                <button class="btn circulo-des-boton-blog Publicarblog" v-on:click="publicar" type="submit" value="">Publicar</button>
 
             </div>
         </div>
-
-
-        <input id="usr" name="usr" type="hidden">
-    </form>
     <!---  inicio post -->
    <publication v-for="post in this.parsedPost" :key="post.id" v-bind:post='post' ></publication>
 
@@ -99,6 +95,7 @@
 </template>
 <script>
     import publication from "./publication"
+    import axios from "axios";
     export default {
         name: "index",
         props:['posts','user'],
@@ -107,14 +104,24 @@
         },
         data(){
             return{
-                parsedPost:undefined
+                parsedPost:undefined,
+                textPost:""
             }
         },
         created() {
-            this.parsedPost=JSON.parse(this.posts).data;
+            this.parsedPost=JSON.parse(this.posts);
+            console.log(this.parsedPost);
         },
         methods:{
-
+            publicar(){
+                axios.post('posts',{
+                    body:this.textPost,
+                }).then(response=>{
+                    if(response.status===201){
+                        location.reload();
+                    }
+                })
+            }
         }
 
     }

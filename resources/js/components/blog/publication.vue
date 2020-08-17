@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="mb-3 desaconte-blog">
-            <p class="tt-video">{{postEdit.title}}</p><br>
+            <p class="tt-video">Posteado por: {{postEdit.author.name}}</p><br>
             <p class="ttt-video-desa">
             <div id="1" name="post-content-edit" v-if="!this.editPost">
                {{postEdit.body}}

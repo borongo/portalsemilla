@@ -2036,10 +2036,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _publication__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./publication */ "./resources/js/components/blog/publication.vue");
-//
-//
-//
-//
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -2136,6 +2134,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
   props: ['posts', 'user'],
@@ -2144,13 +2143,25 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      parsedPost: undefined
+      parsedPost: undefined,
+      textPost: ""
     };
   },
   created: function created() {
-    this.parsedPost = JSON.parse(this.posts).data;
+    this.parsedPost = JSON.parse(this.posts);
+    console.log(this.parsedPost);
   },
-  methods: {}
+  methods: {
+    publicar: function publicar() {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('posts', {
+        body: this.textPost
+      }).then(function (response) {
+        if (response.status === 201) {
+          location.reload();
+        }
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -38831,7 +38842,49 @@ var render = function() {
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
-      _vm._m(3),
+      _c(
+        "div",
+        {
+          staticClass:
+            "form-group container justify-content-start d-flex flex-row border cont-blog-pub shadow"
+        },
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.textPost,
+                expression: "textPost"
+              }
+            ],
+            staticClass: "ml-2 mt-1 mb-1 border-0",
+            staticStyle: { width: "1155px" },
+            attrs: { type: "text", name: "posteo" },
+            domProps: { value: _vm.textPost },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.textPost = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "publish-button" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn circulo-des-boton-blog Publicarblog",
+                attrs: { type: "submit", value: "" },
+                on: { click: _vm.publicar }
+              },
+              [_vm._v("Publicar")]
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
       _vm._l(this.parsedPost, function(post) {
         return _c("publication", { key: post.id, attrs: { post: post } })
@@ -39105,40 +39158,6 @@ var staticRenderFns = [
         )
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("form", { attrs: { method: "post" } }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "form-group container justify-content-start d-flex flex-row border cont-blog-pub shadow"
-        },
-        [
-          _c("input", {
-            staticClass: "ml-2 mt-1 mb-1 border-0",
-            staticStyle: { width: "1155px" },
-            attrs: { type: "text", name: "posteo" }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "publish-button" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn circulo-des-boton-blog Publicarblog",
-                attrs: { type: "submit", value: "" }
-              },
-              [_vm._v("Publicar")]
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("input", { attrs: { id: "usr", name: "usr", type: "hidden" } })
-    ])
   }
 ]
 render._withStripped = true
@@ -39257,7 +39276,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "mb-3 desaconte-blog" }, [
         _c("p", { staticClass: "tt-video" }, [
-          _vm._v(_vm._s(_vm.postEdit.title))
+          _vm._v("Posteado por: " + _vm._s(_vm.postEdit.author.name))
         ]),
         _c("br"),
         _vm._v(" "),

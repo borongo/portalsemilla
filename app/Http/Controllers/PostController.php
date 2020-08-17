@@ -23,7 +23,7 @@ class PostController extends Controller
             return  $query->where('id_user',Auth::id())->where('pin_post',1);
         }])->withCount(['pined as like_user'=>function($query){
             return  $query->where('id_user',Auth::id())->where('like_post',1);
-        }])->orderBy('pin_user','DESC')->paginate(10);
+        }])->orderBy('pin_user','DESC')->get();
         return view('posts.posts',compact('posts'));
     }
 
@@ -47,7 +47,6 @@ class PostController extends Controller
     {
 
         $post=Post::create(array_merge($request->all(),['id_user'=>Auth::id()]));
-        User::find(Auth::id())->posts()->attach($post->id);
         return $post;
     }
 
@@ -59,6 +58,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
+
         return Post::with(['author','comments',])->withCount(['pined as pin_user'=>function($query){
             return  $query->where('id_user',Auth::id())->where('pin_post',1);
         }])->withCount(['pined as like_user'=>function($query){
@@ -86,7 +86,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Post::where('id',$id)->update($request->only('body'));
+        Post::where([['id',"=",$id],["id_user","=",Auth::id()]])->update($request->only('body'));
         return $this->show($id);
     }
 
@@ -111,6 +111,9 @@ class PostController extends Controller
             );
           $posts_user->like_post=1;
           $posts_user->save();
+          $post=Post::find($request->id);
+          $post->likes+=1;
+          $post->save();
         }
         if($request->isMethod('patch')){
              PostsUser::where([
@@ -122,6 +125,9 @@ class PostController extends Controller
                     'like_post' =>0
                 ]
             );
+            $post=Post::find($request->id);
+            $post->likes-=1;
+            $post->save();
         }
 
         return $this->show($request->id);
