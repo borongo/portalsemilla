@@ -11,7 +11,7 @@
             <div class="card justify-content-center border-0 card-us " style="width: 6rem; border-radius: 2em ">
                 <a href="?pagina=videos">    <h6 class="text-center Nick_Name videos-title-menu">Videos</h6></a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
-                    <div class="progress-bar " role="progressbar " style="25%; background-color: rgb(200, 154, 55);" aria-valuenow="100 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                    <div class="progress-bar " role="progressbar " style="25%; background-color: rgb(200,154,55);" aria-valuenow="100 " aria-valuemin="0 " aria-valuemax="100 "></div>
             </div>
             <p class="text-centert porcentaje-tv">porcentaje  </p>
         </div>
