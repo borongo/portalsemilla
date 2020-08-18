@@ -2518,6 +2518,212 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/index.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/inicio/index.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -40087,6 +40293,604 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/index.vue?vue&type=template&id=01b2cf1a&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/inicio/index.vue?vue&type=template&id=01b2cf1a& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "bg2 tam" }, [
+      _c("div", { staticClass: "container contenedor" }, [
+        _c(
+          "div",
+          { staticClass: "border border-0 d-flex justify-content-between sup" },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "d-flex flex-row bd-highlight  ",
+                staticStyle: {
+                  width: "8rem",
+                  "border-radius": "2em",
+                  position: "relative",
+                  left: "0",
+                  top: "0"
+                }
+              },
+              [
+                _c("a", { attrs: { href: "?pagina=avatar&id_user=1" } }, [
+                  _c("img", {
+                    staticClass: " rounded-circle d-block ml-2",
+                    staticStyle: { height: "221px", width: "221px" },
+                    attrs: { src: "imagen usuario" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=avatar&id_user=1" } }, [
+                  _c("img", {
+                    staticClass: "encima rounded-circle",
+                    attrs: { src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png") }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: " align-items-center sep-name " }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "justify-content-between",
+                      staticStyle: { display: "flex" }
+                    },
+                    [
+                      _c("div", { staticClass: "name mb-1" }, [
+                        _vm._v(" nombre ")
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "name", attrs: { href: "#" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                            alt: "",
+                            width: "42px",
+                            height: "42px"
+                          }
+                        })
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "progress sep" }, [
+                    _c("div", {
+                      staticClass: "progress-bar bg-danger ",
+                      staticStyle: {},
+                      attrs: {
+                        role: "progressbar ",
+                        "aria-valuenow": "100",
+                        "aria-valuemin": "0 ",
+                        "aria-valuemax": "50"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-center text-dark porcent" }, [
+                    _vm._v("25% ")
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "container-fluid med-prin d-flex flex-column  justify-content-center"
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/cofre1.png */ "./resources/img/icon/cofre1.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/cofre2.png */ "./resources/img/icon/cofre2.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/cofre3.png */ "./resources/img/icon/cofre3.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex justify-content-center " }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
+                      width: "44px",
+                      height: "55px"
+                    }
+                  })
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "border border-0 d-flex justify-content-around align-items-center ml-3 ",
+            staticStyle: { "border-radius": "2em" }
+          },
+          [
+            _c("h5", { staticClass: "ml-4 pl-3 cofrename-inicio Cofre_1" }, [
+              _vm._v(" Cofre 1 ")
+            ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "pl-2 ml-3 cofrename-inicio Cofre_1" }, [
+              _vm._v(" Cofre 2 ")
+            ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "pl-3 mr-3 cofrename-inicio Cofre_1" }, [
+              _vm._v(" Cofre 3 ")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              " border border-0 d-flex justify-content-around align-items-center sup sep-cont",
+            staticStyle: { "border-radius": "2em" }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card d-flex flex-row bd-highlight contenedor-icons"
+              },
+              [
+                _c("a", { attrs: { href: "?pagina=videos" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos rounded-circle ",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/cam2.png */ "./resources/img/icon/cam2.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos rounded-circle",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/rompe2.png */ "./resources/img/icon/rompe2.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "icons-pos  rounded-circle",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/icon/cup2.png */ "./resources/img/icon/cup2.png"),
+                    alt: "",
+                    width: "43px",
+                    height: "43px"
+                  }
+                }),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos  rounded-circle",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/blog2.png */ "./resources/img/icon/blog2.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card d-flex flex-row bd-highlight contenedor-icons"
+              },
+              [
+                _c("a", { attrs: { href: "?pagina=videos" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos ",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "icons-pos",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                    alt: "",
+                    width: "43px",
+                    height: "43px"
+                  }
+                }),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card d-flex flex-row bd-highlight contenedor-icons"
+              },
+              [
+                _c("a", { attrs: { href: "?pagina=videos" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "icons-pos",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                    alt: "",
+                    width: "43px",
+                    height: "43px"
+                  }
+                }),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                  _c("img", {
+                    staticClass: "icons-pos",
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                      alt: "",
+                      width: "43px",
+                      height: "43px"
+                    }
+                  })
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "container py-3 px-3 pb-3 border shadow content-central "
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "container-fluid d-flex justify-content-between content-card"
+              },
+              [
+                _c("div", [
+                  _c("h5", { staticClass: "mt-2 usuario-titulo " }, [
+                    _c("b", [_vm._v("USUARIOS")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "form-group d-flex justify-content-between "
+                    },
+                    [
+                      _c("input", {
+                        staticClass: "form-control border-0 ",
+                        staticStyle: { "border-radius": "1em 0em 0em 1em" },
+                        attrs: {
+                          type: "text",
+                          id: "formulario",
+                          placeholder: "buscar "
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass: "form-control border-0 ",
+                          staticStyle: { "border-radius": "0em 0em 0em 0em" },
+                          attrs: { name: " ", id: " " }
+                        },
+                        [
+                          _c("option", { staticClass: "Logro" }, [
+                            _vm._v("Desafio 1")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { staticClass: "Logro" }, [
+                            _vm._v("Desafio 2")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { staticClass: "Logro" }, [
+                            _vm._v("Desafio 3")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-light border-0 ",
+                          staticStyle: { "border-radius": "0em 1em 1em 0em" },
+                          attrs: { type: "submit ", id: "boton" }
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: __webpack_require__(/*! ../../../img/icon/lupa.png */ "./resources/img/icon/lupa.png"),
+                              alt: " ",
+                              height: "23px "
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("nav", { attrs: { "aria-label": " ... " } }, [
+                    _c("ul", { staticClass: "pagination " }, [
+                      _c("li", { staticClass: "page-item " }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "page-link card-us border-0 text-dark rounded-circle",
+                            attrs: { href: "", tabindex: "-1 " }
+                          },
+                          [_vm._v("\n                            <")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "page-item " }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "page-link card-us border-0 text-dark rounded-circle"
+                          },
+                          [_vm._v("paigna")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "page-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "page-link card-us border-0 text-dark rounded-circle",
+                            attrs: { href: "" }
+                          },
+                          [_vm._v(">")]
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mejores d-flex shadow" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "row row-cols-6 content-card upe" }, [
+              _c("div", { staticClass: "col card-s  card-columns " }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "card justify-content-center border-0 card-us ",
+                    staticStyle: { width: "6rem", "border-radius": "2em" }
+                  },
+                  [
+                    _c("h6", { staticClass: "text-center Nick_Name" }, [
+                      _vm._v("nombre usuario")
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "?pagina=avatar&id_user=" } }, [
+                      _c("img", {
+                        staticClass:
+                          "card-img-top rounded-circle mx-auto d-block Nick_Name_img",
+                        attrs: { src: "img user" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "d-flex justify-content-center" },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+                            alt: "",
+                            width: "44px",
+                            height: "55px"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+                            alt: "",
+                            width: "44px",
+                            height: "55px"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+                            alt: "",
+                            width: "44px",
+                            height: "55px"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { attrs: { name: "progessssbar" } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "progress ml-2 mr-2  Nick_Name_progress  "
+                        },
+                        [
+                          _c("div", {
+                            staticClass: "progress-bar bg-danger ",
+                            staticStyle: {},
+                            attrs: {
+                              role: "progressbar ",
+                              "aria-valuenow": "100 ",
+                              "aria-valuemin": "0 ",
+                              "aria-valuemax": "100 "
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "card-text text-center Nick_Name_porcent"
+                        },
+                        [_vm._v("25%")]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -52249,6 +53053,83 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/img/icon/blog.png":
+/*!*************************************!*\
+  !*** ./resources/img/icon/blog.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/blog.png?1b4ddda9193bd08970bdcef5782b03b9";
+
+/***/ }),
+
+/***/ "./resources/img/icon/blog2.png":
+/*!**************************************!*\
+  !*** ./resources/img/icon/blog2.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/blog2.png?eff81bc872bd4eda32ec5a34367e1e3f";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cam.png":
+/*!************************************!*\
+  !*** ./resources/img/icon/cam.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cam.png?b84134e91dfb3892dedff74c1897d7b2";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cam2.png":
+/*!*************************************!*\
+  !*** ./resources/img/icon/cam2.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cam2.png?ae92f6bb998c3ceaa9db7416d5847b91";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cofre1.png":
+/*!***************************************!*\
+  !*** ./resources/img/icon/cofre1.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cofre1.png?caca9f06531b87566172f331aeee0ea1";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cofre2.png":
+/*!***************************************!*\
+  !*** ./resources/img/icon/cofre2.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cofre2.png?05f33bb342a8ba1f075201c6bbeb6b21";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cofre3.png":
+/*!***************************************!*\
+  !*** ./resources/img/icon/cofre3.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cofre3.png?1a9d0ff9e0a5bbeb65dd11da9cb56413";
+
+/***/ }),
+
 /***/ "./resources/img/icon/corazon_lleno.png":
 /*!**********************************************!*\
   !*** ./resources/img/icon/corazon_lleno.png ***!
@@ -52268,6 +53149,28 @@ module.exports = "/images/corazon_lleno.png?261ea0c5c07db964c2b2dc87ac3fa46a";
 /***/ (function(module, exports) {
 
 module.exports = "/images/corazon_vacio.png?315fe16522b76089a61cd8f5df3b12b2";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cup.png":
+/*!************************************!*\
+  !*** ./resources/img/icon/cup.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cup.png?980a20c3837e6436374eac48c1826a1a";
+
+/***/ }),
+
+/***/ "./resources/img/icon/cup2.png":
+/*!*************************************!*\
+  !*** ./resources/img/icon/cup2.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cup2.png?d1416d0e2033c1c37d78520850a3889f";
 
 /***/ }),
 
@@ -52304,6 +53207,39 @@ module.exports = "/images/globo_vacio.png?821808f17b446df6b3957187ba1887a4";
 
 /***/ }),
 
+/***/ "./resources/img/icon/lupa.png":
+/*!*************************************!*\
+  !*** ./resources/img/icon/lupa.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/lupa.png?58a424fdad1f73418d2eadc5719af2a1";
+
+/***/ }),
+
+/***/ "./resources/img/icon/medallas.png":
+/*!*****************************************!*\
+  !*** ./resources/img/icon/medallas.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/medallas.png?266f9bf7052f1df4ebf1dd948a9a144e";
+
+/***/ }),
+
+/***/ "./resources/img/icon/medallas_vacia.png":
+/*!***********************************************!*\
+  !*** ./resources/img/icon/medallas_vacia.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/medallas_vacia.png?bde9a4c5451a84bffb1ba87a886e1371";
+
+/***/ }),
+
 /***/ "./resources/img/icon/pin_lleno.png":
 /*!******************************************!*\
   !*** ./resources/img/icon/pin_lleno.png ***!
@@ -52323,6 +53259,28 @@ module.exports = "/images/pin_lleno.png?46a73a434adfb076cddabfbd80fe6b82";
 /***/ (function(module, exports) {
 
 module.exports = "/images/pin_vacio.png?3ba1f592ee0f2a7f4184cdb4d3038957";
+
+/***/ }),
+
+/***/ "./resources/img/icon/rompe.png":
+/*!**************************************!*\
+  !*** ./resources/img/icon/rompe.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/rompe.png?94dca6fc4faaa370080ee86ac3dd84f1";
+
+/***/ }),
+
+/***/ "./resources/img/icon/rompe2.png":
+/*!***************************************!*\
+  !*** ./resources/img/icon/rompe2.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/rompe2.png?ece000bd069e0623f05c99d426ad2409";
 
 /***/ }),
 
@@ -52354,6 +53312,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('index-blog', __webpack_require__(/*! ./components/blog/index.vue */ "./resources/js/components/blog/index.vue")["default"]);
 Vue.component('index-desafios', __webpack_require__(/*! ./components/desafio/index.vue */ "./resources/js/components/desafio/index.vue")["default"]);
+Vue.component('index', __webpack_require__(/*! ./components/inicio/index.vue */ "./resources/js/components/inicio/index.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -52691,15 +53650,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/desafio/index.vue ***!
   \***************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_3c0741b6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=3c0741b6&scoped=true& */ "./resources/js/components/desafio/index.vue?vue&type=template&id=3c0741b6&scoped=true&");
 /* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/js/components/desafio/index.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -52729,7 +53687,7 @@ component.options.__file = "resources/js/components/desafio/index.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/desafio/index.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52757,6 +53715,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/inicio/index.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/inicio/index.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_01b2cf1a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=01b2cf1a& */ "./resources/js/components/inicio/index.vue?vue&type=template&id=01b2cf1a&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/js/components/inicio/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_01b2cf1a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_01b2cf1a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/inicio/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/inicio/index.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/inicio/index.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/inicio/index.vue?vue&type=template&id=01b2cf1a&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/inicio/index.vue?vue&type=template&id=01b2cf1a& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_01b2cf1a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=01b2cf1a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/index.vue?vue&type=template&id=01b2cf1a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_01b2cf1a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_01b2cf1a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -52775,8 +53802,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Cristobal Avila G\Desktop\Jose fuentes\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Cristobal Avila G\Desktop\Jose fuentes\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/fuentesj5/Desktop/portal/portal/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/fuentesj5/Desktop/portal/portal/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

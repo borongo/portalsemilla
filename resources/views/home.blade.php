@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <index-blog></index-blog>
+    <index></index>
 @endsection
 
