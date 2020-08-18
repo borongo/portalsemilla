@@ -14,11 +14,15 @@ class DesafioController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return array
      */
+
     public function indDesafio(){
-        return DesInsta::where('id_user',Auth::id());
+        return ["19"=>DesInsta::where('id_user',Auth::id())->whereIn('id_desafio',[19])->first(),
+            "20"=>DesInsta::where('id_user',Auth::id())->whereIn('id_desafio',[20])->first(),
+            "21"=>DesInsta::where('id_user',Auth::id())->whereIn('id_desafio',[21])->first()];
     }
+
     public function index()
     {
         $insta=DesInsta::where('id_user',Auth::id());
@@ -43,11 +47,17 @@ class DesafioController extends Controller
      */
     public function store(Request $request)
     {
-       Avance::create([
+      $avance= Avance::firstOrNew([
             "id_desafio"=>$request->id,
             "id_user"=>Auth::id()
         ]);
-       $insta=DesInsta::create([ "id_desafio"=>$request->id,"id_user"=>Auth::id(),"link_insta"=>$request->link_insta]);
+      $avance->save();
+        $insta=DesInsta::firstOrNew([ "id_desafio"=>$request->id,"id_user"=>Auth::id()],["link_insta"=>$request->link_insta]);
+        if($insta->exists){
+            $insta=DesInsta::where([ "id_desafio"=>$request->id,"id_user"=>Auth::id()])->update(["link_insta"=>$request->link_insta]);
+            return DesInsta::where([ "id_desafio"=>$request->id,"id_user"=>Auth::id()])->first();
+        }
+      $insta->save();
        return $insta;
     }
 
@@ -57,7 +67,7 @@ class DesafioController extends Controller
      * @param  \App\Desafio  $desafio
      * @return \Illuminate\Http\Response
      */
-    public function show(  $id)
+    public function show($id)
     {
         $data=explode("-",$id);
         return Desafio::where([['tipo',"=",$data[1]],["n_cofre","=",$data[0]]])->get();

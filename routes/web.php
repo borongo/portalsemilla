@@ -28,3 +28,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('muro',"MuroController");
 Route::resource('desafio','DesafioController')->middleware(['auth']);
 Route::get("insdesafio","DesafioController@indDesafio")->middleware(['auth']);
+Route::resource('videos','VideosController')->middleware(['auth']);
+Route::resource('home','HomeController')->middleware(['auth']);

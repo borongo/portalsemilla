@@ -23,6 +23,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('index-blog', require('./components/blog/index.vue').default);
 Vue.component('index-desafios', require('./components/desafio/index.vue').default);
 Vue.component('index', require('./components/inicio/index.vue').default);
+Vue.component('detalle-user', require('./components/inicio/detalle.vue').default);
+Vue.component('videos', require('./components/videos/index.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

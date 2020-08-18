@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Avance;
 use App\videos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VideosController extends Controller
 {
@@ -14,7 +16,8 @@ class VideosController extends Controller
      */
     public function index()
     {
-        //
+        $videos=["1"=>Avance::where([['id_desafio',"=",1],["id_user","=",Auth::id()]])->first(),"2"=>Avance::where([['id_desafio',"=",2],["id_user","=",Auth::id()]])->first(),"3"=>Avance::where([['id_desafio',"=",3],["id_user","=",Auth::id()]])->first()];
+        return view('videos.videos',compact('videos'));
     }
 
     /**
@@ -35,7 +38,12 @@ class VideosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $avance= Avance::firstOrNew([
+            "id_desafio"=>$request->id,
+            "id_user"=>Auth::id()
+        ]);
+        $avance->save();
+        return $avance;
     }
 
     /**

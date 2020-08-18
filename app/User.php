@@ -45,4 +45,27 @@ class User extends Authenticatable
         return $this->belongsToMany(Desafio::class,'avance','id_user','id_desafio');
     }
 
+
+
+    public function avances()
+    {
+        return $this->hasMany('App\Models\Avance', 'id_user');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment', 'id_user');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function postsUsers()
+    {
+        return $this->hasMany('App\Models\PostsUser', 'id_user');
+    }
+
 }

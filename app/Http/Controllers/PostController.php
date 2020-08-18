@@ -18,7 +18,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        DB::enableQueryLog();
       $posts= Post::with(['author','comments'])->withCount(['pined as pin_user'=>function($query){
             return  $query->where('id_user',Auth::id())->where('pin_post',1);
         }])->withCount(['pined as like_user'=>function($query){
