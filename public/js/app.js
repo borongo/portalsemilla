@@ -2466,6 +2466,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
@@ -2478,21 +2499,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         n_desafio: 1,
         nombre: "",
         tipo: "",
-        link: ""
+        link_insta: ""
       }, {
         id: 20,
         n_cofre: 1,
         n_desafio: 2,
         nombre: "",
         tipo: "",
-        link: ""
+        link_insta: ""
       }, {
         id: 21,
         n_cofre: 1,
         n_desafio: 3,
         nombre: "",
         tipo: "",
-        link: ""
+        link_insta: ""
       }]
     };
   },
@@ -2504,16 +2525,665 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/insdesafio").then(function (res) {
-        _this.desafios = res.data;
-        _this.usr = res.data;
+        console.log();
+        _this.desafios[0].link_insta = res.data[19].link_insta;
+        _this.desafios[1].link_insta = res.data[20].link_insta;
+        _this.desafios[2].link_insta = res.data[21].link_insta;
       });
     },
     validarinsta: function validarinsta(desafio) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/desafio", _objectSpread({}, this.desafios)).then(function (res) {
-        console.log(res.data.instagram);
-      });
+      if (this.validURL(desafio.link_insta)) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/desafio", _objectSpread({}, desafio)).then(function (res) {})["finally"](function () {
+          location.reload();
+        });
+      } else {
+        alert("url invalida");
+      }
+    },
+    validURL: function validURL(str) {
+      var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+
+      return !!pattern.test(str);
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/detalle.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/inicio/detalle.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "detalle",
+  props: ['user', 'avance'],
+  data: function data() {
+    return {
+      ParseUser: undefined,
+      ParseAvance: undefined,
+      Contador: 0
+    };
+  },
+  created: function created() {
+    this.ParseUser = JSON.parse(this.user);
+    this.ParseAvance = JSON.parse(this.avance);
+    console.log(this.ParseUser);
+    console.log(this.ParseAvance);
+    var cofre1 = this.ParseAvance.filter(function (value, index) {
+      console.log(value);
+      console.log(index);
+      if (value.n_cofre === 1) return true;
+    });
+    var cofre2 = this.ParseAvance.filter(function (value, index) {
+      console.log(value);
+      console.log(index);
+      if (value.n_cofre === 1) return true;
+    });
+    var cofre3 = this.ParseAvance.filter(function (value, index) {
+      console.log(value);
+      console.log(index);
+      if (value.n_cofre === 1) return true;
+    });
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -2716,9 +3386,218 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "inicio",
+  props: ['users', 'user', 'paginacion'],
+  data: function data() {
+    return {
+      parsedUser: undefined
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.parsedUser = JSON.parse(this.user);
+    console.log(this.users);
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/videos/index.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/videos/index.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "videos",
+  props: ['videos'],
+  data: function data() {
+    return {
+      iframeMouseOver: {
+        state: false,
+        id: 0
+      },
+      realized: undefined,
+      videosState: [{
+        id: 1,
+        completed: false
+      }, {
+        id: 2,
+        completed: false
+      }, {
+        id: 3,
+        completed: false
+      }]
+    };
+  },
+  created: function created() {
+    this.realized = JSON.parse(this.videos);
+
+    if (this.realized[1] !== null) {
+      this.videosState[0].completed = true;
+    }
+
+    if (this.realized[2] !== null) {
+      this.videosState[1].completed = true;
+    }
+
+    if (this.realized[3] !== null) {
+      this.videosState[2].completed = true;
+    }
+  },
+  methods: {
+    saveVideo: function saveVideo(id) {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('videos', {
+        id: id
+      }).then(function (res) {
+        _this.videosState[res.data.id_desafio].completed = true;
+      });
+    }
   }
 });
 
@@ -39306,24 +40185,16 @@ var staticRenderFns = [
               staticStyle: { width: "6rem", "border-radius": "2em" }
             },
             [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href: "http://portal.portalsemilla.com/?pagina=videos"
-                  }
-                },
-                [
-                  _c(
-                    "h6",
-                    {
-                      staticClass: "text-center Nick_Name videos-title-menu ",
-                      staticStyle: { color: "rgb(206, 206, 206)" }
-                    },
-                    [_vm._v("Videos")]
-                  )
-                ]
-              ),
+              _c("a", { attrs: { href: "/videos" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name videos-title-menu ",
+                    staticStyle: { color: "rgb(206, 206, 206)" }
+                  },
+                  [_vm._v("Videos")]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -39351,7 +40222,7 @@ var staticRenderFns = [
                   staticClass: "text-centert porcentaje-tv",
                   staticStyle: { color: "rgb(206, 206, 206)" }
                 },
-                [_vm._v("10% ")]
+                [_vm._v("0% ")]
               )
             ]
           ),
@@ -39367,24 +40238,16 @@ var staticRenderFns = [
               }
             },
             [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href: "http://portal.portalsemilla.com/?pagina=desafio"
-                  }
-                },
-                [
-                  _c(
-                    "h6",
-                    {
-                      staticClass: "text-center Nick_Name",
-                      staticStyle: { color: "rgb(206, 206, 206)" }
-                    },
-                    [_vm._v("Desafios")]
-                  )
-                ]
-              ),
+              _c("a", { attrs: { href: "/desafio" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name",
+                    staticStyle: { color: "rgb(206, 206, 206)" }
+                  },
+                  [_vm._v("Desafios")]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -39412,7 +40275,7 @@ var staticRenderFns = [
                   staticClass: "text-centert porcentaje-tv",
                   staticStyle: { color: "rgb(206, 206, 206)" }
                 },
-                [_vm._v("5% ")]
+                [_vm._v("0% ")]
               )
             ]
           ),
@@ -39479,7 +40342,7 @@ var staticRenderFns = [
               }
             },
             [
-              _c("a", { attrs: { href: "http://portalsemilla.com/posts" } }, [
+              _c("a", { attrs: { href: "/posts" } }, [
                 _c(
                   "h6",
                   {
@@ -39809,12 +40672,20 @@ var render = function() {
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus, recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos sequi tenetur quae accusamus, quidem ipsa."
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus,\n                recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos\n                sequi tenetur quae accusamus, quidem ipsa."
             )
           ]),
           _vm._v(" "),
           _c("div", { attrs: { name: "desafio19" } }, [
-            _c("img", { attrs: { src: _vm.desafios[0].link, alt: "" } })
+            _c(
+              "a",
+              { attrs: { href: _vm.desafios[0].link_insta, target: "_blank" } },
+              [
+                _c("img", {
+                  attrs: { src: __webpack_require__(/*! ../../../img/per1.png */ "./resources/img/per1.png"), alt: "" }
+                })
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("input", {
@@ -39822,8 +40693,8 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.desafios[0].link,
-                expression: "desafios[0].link"
+                value: _vm.desafios[0].link_insta,
+                expression: "desafios[0].link_insta"
               }
             ],
             attrs: {
@@ -39831,13 +40702,13 @@ var render = function() {
               id: _vm.desafios[0].id,
               name: _vm.desafios[0].nombre
             },
-            domProps: { value: _vm.desafios[0].link },
+            domProps: { value: _vm.desafios[0].link_insta },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.desafios[0], "link", $event.target.value)
+                _vm.$set(_vm.desafios[0], "link_insta", $event.target.value)
               }
             }
           })
@@ -39881,14 +40752,20 @@ var render = function() {
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus, recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos sequi tenetur quae accusamus, quidem ipsa."
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus,\n                recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos\n                sequi tenetur quae accusamus, quidem ipsa."
             )
           ]),
           _vm._v(" "),
           _c("div", { attrs: { name: "desafio19" } }, [
-            _vm.desafios[1].link !== ""
-              ? _c("img", { attrs: { src: _vm.desafios[1].link, alt: "" } })
-              : _c("img", { attrs: { src: "public/images/per1.png", alt: "" } })
+            _c(
+              "a",
+              { attrs: { href: _vm.desafios[0].link_insta, target: "_blank" } },
+              [
+                _c("img", {
+                  attrs: { src: __webpack_require__(/*! ../../../img/per1.png */ "./resources/img/per1.png"), alt: "" }
+                })
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("input", {
@@ -39896,8 +40773,8 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.desafios[1].link,
-                expression: "desafios[1].link"
+                value: _vm.desafios[1].link_insta,
+                expression: "desafios[1].link_insta"
               }
             ],
             attrs: {
@@ -39905,13 +40782,13 @@ var render = function() {
               id: _vm.desafios[1].id,
               name: _vm.desafios[1].nombre
             },
-            domProps: { value: _vm.desafios[1].link },
+            domProps: { value: _vm.desafios[1].link_insta },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.desafios[1], "link", $event.target.value)
+                _vm.$set(_vm.desafios[1], "link_insta", $event.target.value)
               }
             }
           })
@@ -39955,14 +40832,20 @@ var render = function() {
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus, recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos sequi tenetur quae accusamus, quidem ipsa."
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus,\n                recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos\n                sequi tenetur quae accusamus, quidem ipsa."
             )
           ]),
           _vm._v(" "),
           _c("div", { attrs: { name: "desafio19" } }, [
-            _vm.desafios[2].link !== ""
-              ? _c("img", { attrs: { src: _vm.desafios[2].link, alt: "" } })
-              : _c("img", { attrs: { src: "public/images/per1.png", alt: "" } })
+            _c(
+              "a",
+              { attrs: { href: _vm.desafios[2].link_insta, target: "_blank" } },
+              [
+                _c("img", {
+                  attrs: { src: __webpack_require__(/*! ../../../img/per1.png */ "./resources/img/per1.png"), alt: "" }
+                })
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("input", {
@@ -39970,8 +40853,8 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.desafios[0].link,
-                expression: "desafios[0].link"
+                value: _vm.desafios[2].link_insta,
+                expression: "desafios[2].link_insta"
               }
             ],
             attrs: {
@@ -39979,13 +40862,13 @@ var render = function() {
               id: _vm.desafios[2].id,
               name: _vm.desafios[2].nombre
             },
-            domProps: { value: _vm.desafios[0].link },
+            domProps: { value: _vm.desafios[2].link_insta },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.desafios[0], "link", $event.target.value)
+                _vm.$set(_vm.desafios[2], "link_insta", $event.target.value)
               }
             }
           })
@@ -40045,14 +40928,14 @@ var staticRenderFns = [
               staticStyle: { width: "6rem", "border-radius": "2em" }
             },
             [
-              _c("a", { attrs: { href: "?pagina=videos" } }, [
+              _c("a", { attrs: { href: "/videos" } }, [
                 _c(
                   "h6",
                   {
                     staticClass: "text-center Nick_Name videos-title-menu ",
                     staticStyle: { color: "rgb(206, 206, 206)" }
                   },
-                  [_vm._v("Videos")]
+                  [_vm._v("\n                        Videos")]
                 )
               ]),
               _vm._v(" "),
@@ -40063,7 +40946,7 @@ var staticRenderFns = [
                   _c("div", {
                     staticClass: "progress-bar ",
                     staticStyle: {
-                      width: "10%",
+                      width: "0%",
                       "background-color": "rgb(206, 206, 206)"
                     },
                     attrs: {
@@ -40082,7 +40965,7 @@ var staticRenderFns = [
                   staticClass: "text-centert porcentaje-tv",
                   staticStyle: { color: "rgb(206, 206, 206)" }
                 },
-                [_vm._v("50% ")]
+                [_vm._v("0% ")]
               )
             ]
           ),
@@ -40098,7 +40981,7 @@ var staticRenderFns = [
               }
             },
             [
-              _c("a", { attrs: { href: "?pagina=desafio" } }, [
+              _c("a", { attrs: { href: "/desafio" } }, [
                 _c(
                   "h6",
                   {
@@ -40130,7 +41013,7 @@ var staticRenderFns = [
               ),
               _vm._v(" "),
               _c("p", { staticClass: "text-centert porcentaje-tv" }, [
-                _vm._v("70% ")
+                _vm._v("0% ")
               ])
             ]
           ),
@@ -40181,7 +41064,7 @@ var staticRenderFns = [
                   staticClass: "text-centert porcentaje-tv",
                   staticStyle: { color: "rgb(206, 206, 206)" }
                 },
-                [_vm._v("5% ")]
+                [_vm._v("0% ")]
               )
             ]
           ),
@@ -40197,7 +41080,7 @@ var staticRenderFns = [
               }
             },
             [
-              _c("a", { attrs: { href: "?pagina=blog" } }, [
+              _c("a", { attrs: { href: "/posts" } }, [
                 _c(
                   "h6",
                   {
@@ -40234,7 +41117,7 @@ var staticRenderFns = [
                   staticClass: "text-centert porcentaje-tv",
                   staticStyle: { color: "rgb(206, 206, 206)" }
                 },
-                [_vm._v("9% ")]
+                [_vm._v("% ")]
               )
             ]
           )
@@ -40276,11 +41159,1913 @@ var staticRenderFns = [
               [
                 _c("p", [
                   _vm._v(
-                    "Con el objetivo de ofrecer una experiencia lo más fiel posible a la realidad, ‘Dirt Rally 2.0’ aboga por los daños reales en los vehículos, así como unas físicas tremendamente exigentes. Una curva mal dada y veremos consecuencias en la\n                chapa, las ruedas o el motor. Un mal volantazo y veremos cómo nuestro automóvil queda totalmente inservible. Y sí, es posible recibir daños letales si lo habilitamos en opciones."
+                    "Con el objetivo de ofrecer una experiencia lo más fiel posible a la realidad, ‘Dirt Rally 2.0’\n                    aboga por los daños reales en los vehículos, así como unas físicas tremendamente exigentes. Una\n                    curva mal dada y veremos consecuencias en la\n                    chapa, las ruedas o el motor. Un mal volantazo y veremos cómo nuestro automóvil queda totalmente\n                    inservible. Y sí, es posible recibir daños letales si lo habilitamos en opciones."
                   )
                 ])
               ]
             )
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/detalle.vue?vue&type=template&id=38eb9750&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/inicio/detalle.vue?vue&type=template&id=38eb9750&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "bg3 tam2" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container-fluid contenedor" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "border border-0 d-flex justify-content-between sup margen-title-avatar"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-flex flex-row bdcard justify-content-center border-0 card-us-highlight  ",
+              staticStyle: {
+                width: "8rem",
+                "border-radius": "2em",
+                position: "relative",
+                left: "0",
+                top: "0"
+              }
+            },
+            [
+              _c("a", { attrs: { href: "" } }, [
+                _c("img", {
+                  staticClass: " rounded-circle d-block ml-2",
+                  staticStyle: { height: "221px", width: "221px" },
+                  attrs: { src: this.ParseUser.img_avatar }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: " align-items-center sep-name " }, [
+                _c("h6", { staticClass: "text-center Nick_Name" }, [
+                  _vm._v(_vm._s(this.ParseUser.name))
+                ]),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _c("div", { staticClass: "progress sep" }, [
+                  _c("div", {
+                    staticClass: "progress-bar bg-danger ",
+                    style: "width:" + this.ParseUser.avance + "%",
+                    attrs: {
+                      role: "progressbar",
+                      "aria-valuenow": "100",
+                      "aria-valuemin": "0",
+                      "aria-valuemax": "50"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-center text-dark porcent" }, [
+                  _vm._v(_vm._s(this.ParseUser.avance + "%"))
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(3)
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(4),
+      _vm._v(" "),
+      _vm._m(5),
+      _vm._v(" "),
+      _vm._m(6),
+      _vm._v(" "),
+      _vm._m(7),
+      _vm._v(" "),
+      _vm._m(8)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/home" } }, [
+      _c("div", { staticClass: "retorno" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "" } }, [
+      _c("img", {
+        staticClass: "encima rounded-circle",
+        attrs: { src: __webpack_require__(/*! ../../../img/icon/edit.png */ "./resources/img/icon/edit.png") }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "justify-content-between",
+        staticStyle: { display: "flex" }
+      },
+      [
+        _c("div", { staticClass: "name mb-1 JuanK_" }),
+        _vm._v(" "),
+        _c("a", { staticClass: "name", attrs: { href: "#" } }, [
+          _c("img", {
+            staticStyle: {},
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+              alt: "",
+              width: "42px",
+              height: "42px"
+            }
+          })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "container-fluid med-prin d-flex flex-column  justify-content-center"
+      },
+      [
+        _c("div", { staticClass: "d-flex justify-content-center" }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex justify-content-center " }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "container text-center border shadow content-central-avatar-cofres ",
+        staticStyle: { "margin-left": "182px" }
+      },
+      [
+        _c(
+          "p",
+          { staticClass: "Cofres", staticStyle: { "margin-top": "28px" } },
+          [_vm._v("Cofres")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container text-center border shadow cont-cofre1" },
+      [
+        _c("div", [
+          _c(
+            "div",
+            {
+              staticClass: "d-flex flex-row bd-highlight  ",
+              staticStyle: {
+                width: "8rem",
+                "border-radius": "2em",
+                position: "relative",
+                left: "0",
+                top: "0"
+              }
+            },
+            [
+              _c("img", {
+                staticClass: "encima-cofre1 rounded-circle",
+                attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass: "mt-4 ml-4 Cofre_1",
+              staticStyle: {
+                "margin-righ": "-40px",
+                "text-align": "initial !important"
+              }
+            },
+            [_vm._v("Cofre 1")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex justify-content-start cofre1-iconos" },
+            [
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3" },
+                [
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1 " },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam2.png */ "./resources/img/icon/cam2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1 " },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Videos")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/rompe2.png */ "./resources/img/icon/rompe2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Desafios")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                    [
+                      _c("img", {
+                        staticClass: "rounded-circle ",
+                        attrs: {
+                          src: __webpack_require__(/*! ../../../img/icon/cup2.png */ "./resources/img/icon/cup2.png"),
+                          alt: "",
+                          width: "74px",
+                          height: "74px"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                    [
+                      _c("img", {
+                        staticClass: "rounded-circle ",
+                        attrs: {
+                          src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                          alt: "",
+                          width: "74px",
+                          height: "74px"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                    },
+                    [_vm._v("Juegos")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/blog2.png */ "./resources/img/icon/blog2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Blogs")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container text-center border shadow cont-cofre1" },
+      [
+        _c("div", [
+          _c(
+            "div",
+            {
+              staticClass: "d-flex flex-row bd-highlight  ",
+              staticStyle: {
+                width: "8rem",
+                "border-radius": "2em",
+                position: "relative",
+                left: "0",
+                top: "0"
+              }
+            },
+            [
+              _c("img", {
+                staticClass: "encima-cofre1 rounded-circle",
+                attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass: "mt-4 ml-4 Cofre_1",
+              staticStyle: {
+                "margin-righ": "-40px",
+                "text-align": "initial !important"
+              }
+            },
+            [_vm._v("Cofre 2")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex justify-content-start cofre1-iconos" },
+            [
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3" },
+                [
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1 " },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam2.png */ "./resources/img/icon/cam2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1 " },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Videos")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/rompe2.png */ "./resources/img/icon/rompe2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Desafios")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                    [
+                      _c("img", {
+                        staticClass: "rounded-circle ",
+                        attrs: {
+                          src: __webpack_require__(/*! ../../../img/icon/cup2.png */ "./resources/img/icon/cup2.png"),
+                          alt: "",
+                          width: "74px",
+                          height: "74px"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                    [
+                      _c("img", {
+                        staticClass: "rounded-circle ",
+                        attrs: {
+                          src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                          alt: "",
+                          width: "74px",
+                          height: "74px"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                    },
+                    [_vm._v("Juegos")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/blog2.png */ "./resources/img/icon/blog2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Blogs")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container text-center border shadow cont-cofre1" },
+      [
+        _c("div", [
+          _c(
+            "div",
+            {
+              staticClass: "d-flex flex-row bd-highlight  ",
+              staticStyle: {
+                width: "8rem",
+                "border-radius": "2em",
+                position: "relative",
+                left: "0",
+                top: "0"
+              }
+            },
+            [
+              _c("img", {
+                staticClass: "encima-cofre1 rounded-circle",
+                attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass: "mt-4 ml-4 Cofre_1",
+              staticStyle: {
+                "margin-righ": "-40px",
+                "text-align": "initial !important"
+              }
+            },
+            [_vm._v("Cofre 3")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex justify-content-start cofre1-iconos" },
+            [
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3" },
+                [
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1 " },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam2.png */ "./resources/img/icon/cam2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1 " },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=videos" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Videos")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/rompe2.png */ "./resources/img/icon/rompe2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=desafio" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Desafios")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                    [
+                      _c("img", {
+                        staticClass: "rounded-circle ",
+                        attrs: {
+                          src: __webpack_require__(/*! ../../../img/icon/cup2.png */ "./resources/img/icon/cup2.png"),
+                          alt: "",
+                          width: "74px",
+                          height: "74px"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                    [
+                      _c("img", {
+                        staticClass: "rounded-circle ",
+                        attrs: {
+                          src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                          alt: "",
+                          width: "74px",
+                          height: "74px"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 name-muro"
+                    },
+                    [_vm._v("Juegos")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex flex-column bd-highlight mb-3 " },
+                [
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "p-2 bd-highlight  sep-icons-cofre1" },
+                      [
+                        _c("img", {
+                          staticClass: "rounded-circle ",
+                          attrs: {
+                            src: __webpack_require__(/*! ../../../img/icon/blog2.png */ "./resources/img/icon/blog2.png"),
+                            alt: "",
+                            width: "74px",
+                            height: "74px"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-2 bd-highlight sep-icons-cofre1 name-muro"
+                      },
+                      [_vm._v("Blogs")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 text-white circulo-video"
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "p-2 bd-highlight  sep-icons-cofre1 punteados"
+                    },
+                    [_vm._v("3")]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          " container d-flex justify-content-between content-historial"
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "container  text-center  shadow historial1 " },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-end ",
+                staticStyle: { "padding-top": "30px" }
+              },
+              [
+                _c(
+                  "nav",
+                  {
+                    staticClass: "constado d-flex",
+                    attrs: { "aria-label": " ... " }
+                  },
+                  [
+                    _c("ul", { staticClass: "pagination " }, [
+                      _c("li", { staticClass: "page-item" }),
+                      _c("li", { staticClass: "page-item " }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "page-link card-us border-0 text-white"
+                          },
+                          [_vm._v("1 de 1")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "page-link card-us border-0 text-white rounded-circle",
+                          attrs: { href: "# ", tabindex: "-1 " }
+                        },
+                        [_vm._v("\n                                <")]
+                      ),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "page-item " }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "page-link card-us border-0 text-white rounded-circle",
+                            attrs: { href: "# " }
+                          },
+                          [_vm._v(">")]
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v("\n\n\n                foreach\n\n\n                "),
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-start ",
+                staticStyle: { "padding-top": "30px" }
+              },
+              [
+                _c("p", { staticClass: "circulo-blog" }),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-white" }, [
+                  _c("b", [_vm._v("Nickname")]),
+                  _vm._v(" a públicado en "),
+                  _c("b", [_vm._v("Desafios")])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-start ",
+                staticStyle: { "padding-top": "30px" }
+              },
+              [
+                _c("img", {
+                  staticClass: " rounded-circle d-block",
+                  staticStyle: {
+                    height: "159px",
+                    width: "159px",
+                    "margin-left": "35px"
+                  },
+                  attrs: { src: __webpack_require__(/*! ../../../img/img.png */ "./resources/img/img.png") }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", { staticClass: "historial-text" }, [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed\n                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum\n                            suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel\n                            facilisis. "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "historial-link",
+                      attrs: { href: "link a publicacion insta" }
+                    },
+                    [_vm._v("Publicacion")]
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex justify-content-end" }, [
+              _c("p", { staticClass: "fecha-public" }, [_vm._v("fecha de hoy")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "divisor" }),
+            _vm._v("\n\n                endforeach\n\n            ")
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "container text-center border shadow historial2 " },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-end ",
+                staticStyle: { "padding-top": "30px" }
+              },
+              [
+                _c(
+                  "nav",
+                  {
+                    staticClass: "constado d-flex",
+                    attrs: { "aria-label": " ... " }
+                  },
+                  [
+                    _c("ul", { staticClass: "pagination " }, [
+                      _c("li", { staticClass: "page-item" }),
+                      _c("li", { staticClass: "page-item " }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "page-link card-us border-0 rounded-circle text-white"
+                          },
+                          [_vm._v("1 de 1")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "page-link card-us border-0 rounded-circle text-white",
+                          attrs: { href: "# ", tabindex: "-1 " }
+                        },
+                        [_vm._v("\n                                <")]
+                      ),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "page-item " }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "page-link card-us border-0 text-white rounded-circle",
+                            attrs: { href: "# " }
+                          },
+                          [_vm._v(">")]
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v("\n                foreach\n                "),
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-start ",
+                staticStyle: { "padding-top": "30px" }
+              },
+              [
+                _c("p", { staticClass: "circulo-blog" }),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-white" }, [
+                  _c("b", [_vm._v("Nickname")]),
+                  _vm._v(" a públicado en "),
+                  _c("b", [_vm._v("Blogs")])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "d-flex justify-content-start ",
+                staticStyle: { "padding-top": "30px" }
+              },
+              [
+                _c("img", {
+                  staticClass: " rounded-circle d-block",
+                  staticStyle: {
+                    height: "159px",
+                    width: "159px",
+                    "margin-left": "35px"
+                  },
+                  attrs: { src: __webpack_require__(/*! ../../../img/img.png */ "./resources/img/img.png") }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", { staticClass: "historial-text" }, [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed\n                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum\n                            suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel\n                            facilisis. "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "historial-link",
+                      attrs: { href: "link a post por id" }
+                    },
+                    [_vm._v("Publicacion")]
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex justify-content-end" }, [
+              _c("p", { staticClass: "fecha-public" }, [
+                _vm._v(" fecha publicacion")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "divisor2" }),
+            _vm._v("\n\n                endforeach\n\n\n            ")
           ]
         )
       ]
@@ -40308,491 +43093,118 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "bg2 tam" }, [
-      _c("div", { staticClass: "container contenedor" }, [
-        _c(
-          "div",
-          { staticClass: "border border-0 d-flex justify-content-between sup" },
-          [
-            _c(
-              "div",
-              {
-                staticClass: "d-flex flex-row bd-highlight  ",
-                staticStyle: {
-                  width: "8rem",
-                  "border-radius": "2em",
-                  position: "relative",
-                  left: "0",
-                  top: "0"
-                }
-              },
-              [
-                _c("a", { attrs: { href: "?pagina=avatar&id_user=1" } }, [
-                  _c("img", {
-                    staticClass: " rounded-circle d-block ml-2",
-                    staticStyle: { height: "221px", width: "221px" },
-                    attrs: { src: "imagen usuario" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=avatar&id_user=1" } }, [
-                  _c("img", {
-                    staticClass: "encima rounded-circle",
-                    attrs: { src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png") }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: " align-items-center sep-name " }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "justify-content-between",
-                      staticStyle: { display: "flex" }
-                    },
-                    [
-                      _c("div", { staticClass: "name mb-1" }, [
-                        _vm._v(" nombre ")
-                      ]),
-                      _vm._v(" "),
-                      _c("a", { staticClass: "name", attrs: { href: "#" } }, [
-                        _c("img", {
-                          attrs: {
-                            src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
-                            alt: "",
-                            width: "42px",
-                            height: "42px"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "progress sep" }, [
-                    _c("div", {
-                      staticClass: "progress-bar bg-danger ",
-                      staticStyle: {},
-                      attrs: {
-                        role: "progressbar ",
-                        "aria-valuenow": "100",
-                        "aria-valuemin": "0 ",
-                        "aria-valuemax": "50"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-center text-dark porcent" }, [
-                    _vm._v("25% ")
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "container-fluid med-prin d-flex flex-column  justify-content-center"
-              },
-              [
-                _c("div", { staticClass: "d-flex justify-content-center" }, [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/cofre1.png */ "./resources/img/icon/cofre1.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/cofre2.png */ "./resources/img/icon/cofre2.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/cofre3.png */ "./resources/img/icon/cofre3.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "d-flex justify-content-center " }, [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/medallas.png */ "./resources/img/icon/medallas.png"),
-                      width: "44px",
-                      height: "55px"
-                    }
-                  })
-                ])
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("br"),
-        _c("br"),
-        _c("br"),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "border border-0 d-flex justify-content-around align-items-center ml-3 ",
-            staticStyle: { "border-radius": "2em" }
-          },
-          [
-            _c("h5", { staticClass: "ml-4 pl-3 cofrename-inicio Cofre_1" }, [
-              _vm._v(" Cofre 1 ")
-            ]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "pl-2 ml-3 cofrename-inicio Cofre_1" }, [
-              _vm._v(" Cofre 2 ")
-            ]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "pl-3 mr-3 cofrename-inicio Cofre_1" }, [
-              _vm._v(" Cofre 3 ")
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              " border border-0 d-flex justify-content-around align-items-center sup sep-cont",
-            staticStyle: { "border-radius": "2em" }
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "card d-flex flex-row bd-highlight contenedor-icons"
-              },
-              [
-                _c("a", { attrs: { href: "?pagina=videos" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos rounded-circle ",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/cam2.png */ "./resources/img/icon/cam2.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=desafio" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos rounded-circle",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/rompe2.png */ "./resources/img/icon/rompe2.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
+  return _c("div", { staticClass: "bg2 tam" }, [
+    _c("div", { staticClass: "container contenedor" }, [
+      _c(
+        "div",
+        { staticClass: "border border-0 d-flex justify-content-between sup" },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "d-flex flex-row bd-highlight  ",
+              staticStyle: {
+                width: "8rem",
+                "border-radius": "2em",
+                position: "relative",
+                left: "0",
+                top: "0"
+              }
+            },
+            [
+              _c("a", { attrs: { href: "/home/" + this.parsedUser.id } }, [
                 _c("img", {
-                  staticClass: "icons-pos  rounded-circle",
-                  attrs: {
-                    src: __webpack_require__(/*! ../../../img/icon/cup2.png */ "./resources/img/icon/cup2.png"),
-                    alt: "",
-                    width: "43px",
-                    height: "43px"
-                  }
-                }),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos  rounded-circle",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/blog2.png */ "./resources/img/icon/blog2.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "card d-flex flex-row bd-highlight contenedor-icons"
-              },
-              [
-                _c("a", { attrs: { href: "?pagina=videos" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=desafio" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos ",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
+                  staticClass: " rounded-circle d-block ml-2",
+                  staticStyle: { height: "221px", width: "221px" },
+                  attrs: { src: this.parsedUser.img_avatar }
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "/home/" + this.parsedUser.id } }, [
                 _c("img", {
-                  staticClass: "icons-pos",
-                  attrs: {
-                    src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
-                    alt: "",
-                    width: "43px",
-                    height: "43px"
-                  }
-                }),
+                  staticClass: "encima rounded-circle",
+                  attrs: { src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png") }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: " align-items-center sep-name " }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "justify-content-between",
+                    staticStyle: { display: "flex" }
+                  },
+                  [
+                    _c("div", { staticClass: "name mb-1" }, [
+                      _vm._v(" " + _vm._s(this.parsedUser.name))
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0)
+                  ]
+                ),
                 _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos",
+                _c("div", { staticClass: "progress sep" }, [
+                  _c("div", {
+                    staticClass: "progress-bar bg-danger ",
+                    style: "width:" + this.parsedUser.avance + "%",
                     attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
+                      role: "progressbar ",
+                      "aria-valuenow": "100",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "50"
                     }
                   })
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-center text-dark porcent" }, [
+                  _vm._v(_vm._s(this.parsedUser.avance + "%") + " ")
                 ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "card d-flex flex-row bd-highlight contenedor-icons"
-              },
-              [
-                _c("a", { attrs: { href: "?pagina=videos" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=desafio" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("img", {
-                  staticClass: "icons-pos",
-                  attrs: {
-                    src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
-                    alt: "",
-                    width: "43px",
-                    height: "43px"
-                  }
-                }),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "?pagina=blog&id_user=1" } }, [
-                  _c("img", {
-                    staticClass: "icons-pos",
-                    attrs: {
-                      src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
-                      alt: "",
-                      width: "43px",
-                      height: "43px"
-                    }
-                  })
-                ])
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "container py-3 px-3 pb-3 border shadow content-central "
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "container-fluid d-flex justify-content-between content-card"
-              },
-              [
-                _c("div", [
-                  _c("h5", { staticClass: "mt-2 usuario-titulo " }, [
-                    _c("b", [_vm._v("USUARIOS")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "form-group d-flex justify-content-between "
-                    },
-                    [
-                      _c("input", {
-                        staticClass: "form-control border-0 ",
-                        staticStyle: { "border-radius": "1em 0em 0em 1em" },
-                        attrs: {
-                          type: "text",
-                          id: "formulario",
-                          placeholder: "buscar "
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          staticClass: "form-control border-0 ",
-                          staticStyle: { "border-radius": "0em 0em 0em 0em" },
-                          attrs: { name: " ", id: " " }
-                        },
-                        [
-                          _c("option", { staticClass: "Logro" }, [
-                            _vm._v("Desafio 1")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { staticClass: "Logro" }, [
-                            _vm._v("Desafio 2")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { staticClass: "Logro" }, [
-                            _vm._v("Desafio 3")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-light border-0 ",
-                          staticStyle: { "border-radius": "0em 1em 1em 0em" },
-                          attrs: { type: "submit ", id: "boton" }
-                        },
-                        [
-                          _c("img", {
-                            attrs: {
-                              src: __webpack_require__(/*! ../../../img/icon/lupa.png */ "./resources/img/icon/lupa.png"),
-                              alt: " ",
-                              height: "23px "
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("nav", { attrs: { "aria-label": " ... " } }, [
-                    _c("ul", { staticClass: "pagination " }, [
-                      _c("li", { staticClass: "page-item " }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "page-link card-us border-0 text-dark rounded-circle",
-                            attrs: { href: "", tabindex: "-1 " }
-                          },
-                          [_vm._v("\n                            <")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "page-item " }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "page-link card-us border-0 text-dark rounded-circle"
-                          },
-                          [_vm._v("paigna")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "page-item" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "page-link card-us border-0 text-dark rounded-circle",
-                            attrs: { href: "" }
-                          },
-                          [_vm._v(">")]
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "mejores d-flex shadow" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "row row-cols-6 content-card upe" }, [
-              _c("div", { staticClass: "col card-s  card-columns " }, [
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(1)
+        ]
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _vm._m(3),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "container py-3 px-3 pb-3 border shadow content-central "
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "container-fluid d-flex justify-content-between content-card"
+            },
+            [
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", { domProps: { innerHTML: _vm._s(_vm.paginacion) } })
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mejores d-flex shadow" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row row-cols-6 content-card upe overflow-auto" },
+            _vm._l(JSON.parse(_vm.users).data, function(user) {
+              return _c("div", { staticClass: "col card-s  card-columns" }, [
                 _c(
                   "div",
                   {
@@ -40802,49 +43214,18 @@ var staticRenderFns = [
                   },
                   [
                     _c("h6", { staticClass: "text-center Nick_Name" }, [
-                      _vm._v("nombre usuario")
+                      _vm._v(_vm._s(user.name))
                     ]),
                     _vm._v(" "),
-                    _c("a", { attrs: { href: "?pagina=avatar&id_user=" } }, [
+                    _c("a", { attrs: { href: "home/" + user.id } }, [
                       _c("img", {
                         staticClass:
                           "card-img-top rounded-circle mx-auto d-block Nick_Name_img",
-                        attrs: { src: "img user" }
+                        attrs: { src: user.img_avatar }
                       })
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "d-flex justify-content-center" },
-                      [
-                        _c("img", {
-                          attrs: {
-                            src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
-                            alt: "",
-                            width: "44px",
-                            height: "55px"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("img", {
-                          attrs: {
-                            src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
-                            alt: "",
-                            width: "44px",
-                            height: "55px"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("img", {
-                          attrs: {
-                            src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
-                            alt: "",
-                            width: "44px",
-                            height: "55px"
-                          }
-                        })
-                      ]
-                    ),
+                    _vm._m(6, true),
                     _vm._v(" "),
                     _c("div", { attrs: { name: "progessssbar" } }, [
                       _c(
@@ -40856,12 +43237,12 @@ var staticRenderFns = [
                         [
                           _c("div", {
                             staticClass: "progress-bar bg-danger ",
-                            staticStyle: {},
+                            style: "width:" + user.avance + "%",
                             attrs: {
-                              role: "progressbar ",
-                              "aria-valuenow": "100 ",
-                              "aria-valuemin": "0 ",
-                              "aria-valuemax": "100 "
+                              role: "progressbar",
+                              "aria-valuenow": user.avance,
+                              "aria-valuemin": "0",
+                              "aria-valuemax": "100"
                             }
                           })
                         ]
@@ -40872,17 +43253,930 @@ var staticRenderFns = [
                         {
                           staticClass: "card-text text-center Nick_Name_porcent"
                         },
-                        [_vm._v("25%")]
+                        [_vm._v(_vm._s(user.avance + "%"))]
                       )
                     ])
                   ]
                 )
               ])
+            }),
+            0
+          )
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { staticClass: "name", attrs: { href: "#" } }, [
+      _c("img", {
+        attrs: {
+          src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+          alt: "",
+          width: "42px",
+          height: "42px"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "container-fluid med-prin d-flex flex-column  justify-content-center"
+      },
+      [
+        _c("div", { staticClass: "d-flex justify-content-center" }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex justify-content-center " }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+              width: "44px",
+              height: "55px"
+            }
+          })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "border border-0 d-flex justify-content-around align-items-center ml-3 ",
+        staticStyle: { "border-radius": "2em" }
+      },
+      [
+        _c("h5", { staticClass: "ml-4 pl-3 cofrename-inicio Cofre_1" }, [
+          _vm._v(" Cofre 1 ")
+        ]),
+        _vm._v(" "),
+        _c("h5", { staticClass: "pl-2 ml-3 cofrename-inicio Cofre_1" }, [
+          _vm._v(" Cofre 2 ")
+        ]),
+        _vm._v(" "),
+        _c("h5", { staticClass: "pl-3 mr-3 cofrename-inicio Cofre_1" }, [
+          _vm._v(" Cofre 3 ")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          " border border-0 d-flex justify-content-around align-items-center sup sep-cont",
+        staticStyle: { "border-radius": "2em" }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "card d-flex flex-row bd-highlight contenedor-icons" },
+          [
+            _c("a", { attrs: { href: "/videos" } }, [
+              _c("img", {
+                staticClass: "icons-pos rounded-circle ",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/desafio" } }, [
+              _c("img", {
+                staticClass: "icons-pos rounded-circle",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "icons-pos  rounded-circle",
+              attrs: {
+                src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                alt: "",
+                width: "43px",
+                height: "43px"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/posts" } }, [
+              _c("img", {
+                staticClass: "icons-pos  rounded-circle",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
             ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "card d-flex flex-row bd-highlight contenedor-icons" },
+          [
+            _c("a", { attrs: { href: "/videos" } }, [
+              _c("img", {
+                staticClass: "icons-pos",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/desafio" } }, [
+              _c("img", {
+                staticClass: "icons-pos ",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "icons-pos",
+              attrs: {
+                src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                alt: "",
+                width: "43px",
+                height: "43px"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/posts]" } }, [
+              _c("img", {
+                staticClass: "icons-pos",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "card d-flex flex-row bd-highlight contenedor-icons" },
+          [
+            _c("a", { attrs: { href: "/videos" } }, [
+              _c("img", {
+                staticClass: "icons-pos",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/cam.png */ "./resources/img/icon/cam.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/desafio" } }, [
+              _c("img", {
+                staticClass: "icons-pos",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/rompe.png */ "./resources/img/icon/rompe.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "icons-pos",
+              attrs: {
+                src: __webpack_require__(/*! ../../../img/icon/cup.png */ "./resources/img/icon/cup.png"),
+                alt: "",
+                width: "43px",
+                height: "43px"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "/posts" } }, [
+              _c("img", {
+                staticClass: "icons-pos",
+                attrs: {
+                  src: __webpack_require__(/*! ../../../img/icon/blog.png */ "./resources/img/icon/blog.png"),
+                  alt: "",
+                  width: "43px",
+                  height: "43px"
+                }
+              })
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", { staticClass: "mt-2 usuario-titulo " }, [
+        _c("b", [_vm._v("USUARIOS")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "form-group d-flex justify-content-between " }, [
+        _c("input", {
+          staticClass: "form-control border-0 ",
+          staticStyle: { "border-radius": "1em 0em 0em 1em" },
+          attrs: { type: "text", id: "formulario", placeholder: "buscar " }
+        }),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "form-control border-0 ",
+            staticStyle: { "border-radius": "0em 0em 0em 0em" },
+            attrs: { name: " ", id: " " }
+          },
+          [
+            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio 1")]),
+            _vm._v(" "),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio 2")]),
+            _vm._v(" "),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio 3")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-light border-0 ",
+            staticStyle: { "border-radius": "0em 1em 1em 0em" },
+            attrs: { type: "submit ", id: "boton" }
+          },
+          [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../../img/icon/lupa.png */ "./resources/img/icon/lupa.png"),
+                alt: " ",
+                height: "23px "
+              }
+            })
           ]
         )
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("img", {
+        attrs: {
+          src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+          alt: "",
+          width: "44px",
+          height: "55px"
+        }
+      }),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+          alt: "",
+          width: "44px",
+          height: "55px"
+        }
+      }),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src: __webpack_require__(/*! ../../../img/icon/medallas_vacia.png */ "./resources/img/icon/medallas_vacia.png"),
+          alt: "",
+          width: "44px",
+          height: "55px"
+        }
+      })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/videos/index.vue?vue&type=template&id=b098dcb4&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/videos/index.vue?vue&type=template&id=b098dcb4& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "bg4 tam3" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container justify-content-start d-flex flex-row border cont-vid1  "
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "d-flex flex-row bd-highlight  ",
+            staticStyle: {
+              width: "8rem",
+              "border-radius": "2em",
+              position: "relative",
+              left: "0",
+              top: "0"
+            }
+          },
+          [
+            this.videosState[0].completed
+              ? _c("img", {
+                  staticClass: "encima-video1 rounded-circle",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png")
+                  }
+                })
+              : _vm._e()
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(3),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "d-flex justify-content-start contenido-vid-der" },
+          [
+            _c("iframe", {
+              attrs: {
+                id: "1",
+                width: "702",
+                height: "400",
+                src: "https://www.youtube.com/embed/r2kBf8EiAAQ",
+                frameborder: "0",
+                allow:
+                  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                allowfullscreen: ""
+              },
+              on: {
+                click: function($event) {
+                  return _vm.saveVideo(this.videosState[0].id)
+                }
+              }
+            })
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container justify-content-start d-flex flex-row border cont-vid1  "
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "d-flex flex-row bd-highlight  ",
+            staticStyle: {
+              width: "8rem",
+              "border-radius": "2em",
+              position: "relative",
+              left: "0",
+              top: "0"
+            }
+          },
+          [
+            this.videosState[1].completed
+              ? _c("img", {
+                  staticClass: "encima-video1 rounded-circle",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png")
+                  }
+                })
+              : _vm._e()
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(4),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "d-flex justify-content-start contenido-vid-der" },
+          [
+            _c(
+              "div",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.saveVideo(this.videosState[1].id)
+                  }
+                }
+              },
+              [
+                _c("iframe", {
+                  attrs: {
+                    id: "2",
+                    width: "702",
+                    height: "400",
+                    src: "https://www.youtube.com/embed/RY47DjD-jbU",
+                    frameborder: "0",
+                    allow:
+                      "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                    allowfullscreen: ""
+                  }
+                })
+              ]
+            )
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container justify-content-start d-flex flex-row border cont-vid1  "
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "d-flex flex-row bd-highlight  ",
+            staticStyle: {
+              width: "8rem",
+              "border-radius": "2em",
+              position: "relative",
+              left: "0",
+              top: "0"
+            }
+          },
+          [
+            this.videosState[2].completed
+              ? _c("img", {
+                  staticClass: "encima-video1 rounded-circle",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png")
+                  }
+                })
+              : _vm._e()
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(5),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "d-flex justify-content-start contenido-vid-der" },
+          [
+            _c("iframe", {
+              attrs: {
+                id: "3",
+                width: "702",
+                height: "400",
+                src: "https://www.youtube.com/embed/nXyT_niBByU",
+                frameborder: "0",
+                allow:
+                  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                allowfullscreen: ""
+              },
+              on: {
+                click: function($event) {
+                  return _vm.saveVideo(this.videosState[2].id)
+                }
+              }
+            })
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "volver a inicio" } }, [
+      _c("div", { staticClass: "retornoblog" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "container-fluid contenedor-vid",
+        staticStyle: { "margin-top": "400px" }
+      },
+      [
+        _c("div", { staticClass: "d-flex justify-content-center menu-st" }, [
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: { width: "6rem", "border-radius": "2em" }
+            },
+            [
+              _c("a", { attrs: { href: "/videos" } }, [
+                _c(
+                  "h6",
+                  { staticClass: "text-center Nick_Name videos-title-menu" },
+                  [_vm._v("Videos")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar ",
+                    staticStyle: { "background-color": "rgb(200, 154, 55)" },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-centert porcentaje-tv" })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: {
+                width: "6rem",
+                "border-radius": "2em",
+                "margin-left": "130px"
+              }
+            },
+            [
+              _c("a", { attrs: { href: "/desafio" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name",
+                    staticStyle: { color: "rgb(206, 206, 206)" }
+                  },
+                  [_vm._v("Desafios")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar",
+                    staticStyle: {
+                      width: "25%",
+                      "background-color": "rgb(206, 206, 206)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "text-centert porcentaje-tv",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("porcentaje  ")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: {
+                width: "6rem",
+                "border-radius": "2em",
+                "margin-left": "130px"
+              }
+            },
+            [
+              _c(
+                "h6",
+                {
+                  staticClass: "text-center Nick_Name",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("Juegos")]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar  ",
+                    staticStyle: {
+                      width: "25%",
+                      "background-color": "rgb(206, 206, 206)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "text-centert porcentaje-tv",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("porcentaje  ")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "card justify-content-center border-0 card-us ",
+              staticStyle: {
+                width: "6rem",
+                "border-radius": "2em",
+                "margin-left": "130px"
+              }
+            },
+            [
+              _c("a", { attrs: { href: "?pagina=blog" } }, [
+                _c(
+                  "h6",
+                  {
+                    staticClass: "text-center Nick_Name",
+                    staticStyle: { color: "rgb(206, 206, 206)" }
+                  },
+                  [_vm._v("Blog")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "progress ml-2 mr-2  menu_progress  " },
+                [
+                  _c("div", {
+                    staticClass: "progress-bar  ",
+                    staticStyle: {
+                      width: "25%",
+                      "background-color": "rgb(206, 206, 206)"
+                    },
+                    attrs: {
+                      role: "progressbar ",
+                      "aria-valuenow": "100 ",
+                      "aria-valuemin": "0 ",
+                      "aria-valuemax": "100 "
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "text-centert porcentaje-tv",
+                  staticStyle: { color: "rgb(206, 206, 206)" }
+                },
+                [_vm._v("porcentaje  ")]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "container text-center border cont-vidt ",
+        staticStyle: { "margin-top": "130px" }
+      },
+      [
+        _c("p", {
+          staticClass: "mt-4 ml-4 Cofre_1",
+          staticStyle: { "text-align": "initial !important" }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "d-flex flex-column justify-content-start video-inter"
+          },
+          [
+            _c(
+              "div",
+              { staticClass: "d-flex  bd-highlight mt-5  Actividad-titulo" },
+              [_c("p", [_vm._v("Actividad")])]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "d-flex flex-column  Actividad-titulo-text" },
+              [
+                _c("p", [
+                  _vm._v(
+                    "Con el objetivo de ofrecer una experiencia lo más fiel posible a la realidad, ‘Dirt Rally 2.0’ aboga por los daños reales en los vehículos, así como unas físicas tremendamente exigentes. Una curva mal dada y veremos consecuencias en la chapa, las ruedas o el motor. Un mal volantazo y veremos cómo nuestro automóvil queda totalmente inservible. Y sí, es posible recibir daños letales si lo habilitamos en opciones."
+                  )
+                ])
+              ]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mt-4 d-flex flex-column numconte justify-content-start" },
+      [
+        _c("p", { staticClass: "num-vid circulo-vid " }, [_vm._v("1")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "tt-video" }, [_vm._v("Microsoft Edge")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "ttt-video" }, [
+          _vm._v(
+            "Análisis: el camino a la cima de la gama media está lleno de curvas."
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mt-4 d-flex flex-column numconte justify-content-start" },
+      [
+        _c("p", { staticClass: "num-vid circulo-vid " }, [_vm._v("1")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "tt-video" }, [_vm._v("Microsoft Edge")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "ttt-video" }, [
+          _vm._v(
+            "Análisis: el camino a la cima de la gama media está lleno de curvas."
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mt-4 d-flex flex-column numconte justify-content-start" },
+      [
+        _c("p", { staticClass: "num-vid circulo-vid " }, [_vm._v("1")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "tt-video" }, [_vm._v("Microsoft Edge")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "ttt-video" }, [
+          _vm._v(
+            "Análisis: el camino a la cima de la gama media está lleno de curvas."
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -53097,39 +56391,6 @@ module.exports = "/images/cam2.png?ae92f6bb998c3ceaa9db7416d5847b91";
 
 /***/ }),
 
-/***/ "./resources/img/icon/cofre1.png":
-/*!***************************************!*\
-  !*** ./resources/img/icon/cofre1.png ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/cofre1.png?caca9f06531b87566172f331aeee0ea1";
-
-/***/ }),
-
-/***/ "./resources/img/icon/cofre2.png":
-/*!***************************************!*\
-  !*** ./resources/img/icon/cofre2.png ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/cofre2.png?05f33bb342a8ba1f075201c6bbeb6b21";
-
-/***/ }),
-
-/***/ "./resources/img/icon/cofre3.png":
-/*!***************************************!*\
-  !*** ./resources/img/icon/cofre3.png ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/cofre3.png?1a9d0ff9e0a5bbeb65dd11da9cb56413";
-
-/***/ }),
-
 /***/ "./resources/img/icon/corazon_lleno.png":
 /*!**********************************************!*\
   !*** ./resources/img/icon/corazon_lleno.png ***!
@@ -53174,6 +56435,17 @@ module.exports = "/images/cup2.png?d1416d0e2033c1c37d78520850a3889f";
 
 /***/ }),
 
+/***/ "./resources/img/icon/edit.png":
+/*!*************************************!*\
+  !*** ./resources/img/icon/edit.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/edit.png?705fb3661e9d5a3abf7f47df53ed914a";
+
+/***/ }),
+
 /***/ "./resources/img/icon/editar.png":
 /*!***************************************!*\
   !*** ./resources/img/icon/editar.png ***!
@@ -53215,17 +56487,6 @@ module.exports = "/images/globo_vacio.png?821808f17b446df6b3957187ba1887a4";
 /***/ (function(module, exports) {
 
 module.exports = "/images/lupa.png?58a424fdad1f73418d2eadc5719af2a1";
-
-/***/ }),
-
-/***/ "./resources/img/icon/medallas.png":
-/*!*****************************************!*\
-  !*** ./resources/img/icon/medallas.png ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/medallas.png?266f9bf7052f1df4ebf1dd948a9a144e";
 
 /***/ }),
 
@@ -53284,6 +56545,28 @@ module.exports = "/images/rompe2.png?ece000bd069e0623f05c99d426ad2409";
 
 /***/ }),
 
+/***/ "./resources/img/img.png":
+/*!*******************************!*\
+  !*** ./resources/img/img.png ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/img.png?78f2d20741047498a593790914f95ef5";
+
+/***/ }),
+
+/***/ "./resources/img/per1.png":
+/*!********************************!*\
+  !*** ./resources/img/per1.png ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/per1.png?9a7ff773088428507007803f6377984e";
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -53313,6 +56596,8 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 Vue.component('index-blog', __webpack_require__(/*! ./components/blog/index.vue */ "./resources/js/components/blog/index.vue")["default"]);
 Vue.component('index-desafios', __webpack_require__(/*! ./components/desafio/index.vue */ "./resources/js/components/desafio/index.vue")["default"]);
 Vue.component('index', __webpack_require__(/*! ./components/inicio/index.vue */ "./resources/js/components/inicio/index.vue")["default"]);
+Vue.component('detalle-user', __webpack_require__(/*! ./components/inicio/detalle.vue */ "./resources/js/components/inicio/detalle.vue")["default"]);
+Vue.component('videos', __webpack_require__(/*! ./components/videos/index.vue */ "./resources/js/components/videos/index.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -53715,6 +57000,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/inicio/detalle.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/inicio/detalle.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _detalle_vue_vue_type_template_id_38eb9750_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./detalle.vue?vue&type=template&id=38eb9750&scoped=true& */ "./resources/js/components/inicio/detalle.vue?vue&type=template&id=38eb9750&scoped=true&");
+/* harmony import */ var _detalle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./detalle.vue?vue&type=script&lang=js& */ "./resources/js/components/inicio/detalle.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _detalle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _detalle_vue_vue_type_template_id_38eb9750_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _detalle_vue_vue_type_template_id_38eb9750_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "38eb9750",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/inicio/detalle.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/inicio/detalle.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/inicio/detalle.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_detalle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./detalle.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/detalle.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_detalle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/inicio/detalle.vue?vue&type=template&id=38eb9750&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/inicio/detalle.vue?vue&type=template&id=38eb9750&scoped=true& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_detalle_vue_vue_type_template_id_38eb9750_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./detalle.vue?vue&type=template&id=38eb9750&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inicio/detalle.vue?vue&type=template&id=38eb9750&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_detalle_vue_vue_type_template_id_38eb9750_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_detalle_vue_vue_type_template_id_38eb9750_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/inicio/index.vue":
 /*!**************************************************!*\
   !*** ./resources/js/components/inicio/index.vue ***!
@@ -53784,6 +57138,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/videos/index.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/videos/index.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_b098dcb4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=b098dcb4& */ "./resources/js/components/videos/index.vue?vue&type=template&id=b098dcb4&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/js/components/videos/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_b098dcb4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_b098dcb4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/videos/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/videos/index.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/videos/index.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/videos/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/videos/index.vue?vue&type=template&id=b098dcb4&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/videos/index.vue?vue&type=template&id=b098dcb4& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_b098dcb4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=b098dcb4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/videos/index.vue?vue&type=template&id=b098dcb4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_b098dcb4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_b098dcb4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -53802,8 +57225,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/fuentesj5/Desktop/portal/portal/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/fuentesj5/Desktop/portal/portal/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/fuentesj5/Desktop/portal5/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/fuentesj5/Desktop/portal5/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -6,7 +6,7 @@
     <div class="container-fluid contenedor-vid" style="margin-top :400px">
         <div class="d-flex justify-content-center">
             <div class="card justify-content-center border-0 card-us " style="width: 6rem; border-radius: 2em ">
-                <a href="http://portal.portalsemilla.com/?pagina=videos">
+                <a href="/videos">
                     <h6 class="text-center Nick_Name videos-title-menu " style="color: rgb(206, 206, 206);">Videos</h6>
                 </a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
@@ -14,11 +14,11 @@
                          style="width:4%; background-color: rgb(206, 206, 206);" aria-valuenow="100 " aria-valuemin="0 "
                          aria-valuemax="100 "></div>
                 </div>
-                <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">10% </p>
+                <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">0% </p>
             </div>
             <div class="card justify-content-center border-0 card-us "
                  style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-                <a href="http://portal.portalsemilla.com/?pagina=desafio">
+                <a href="/desafio">
                     <h6 class="text-center Nick_Name" style="color: rgb(206, 206, 206);">Desafios</h6>
                 </a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
@@ -26,7 +26,7 @@
                          style="width:10%;background-color: rgb(206, 206, 206);" aria-valuenow="100 " aria-valuemin="0 "
                          aria-valuemax="100 "></div>
                 </div>
-                <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">5% </p>
+                <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">0% </p>
             </div>
 
             <div class="card justify-content-center border-0 card-us "
@@ -42,7 +42,7 @@
 
             <div class="card justify-content-center border-0 card-us "
                  style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-                <a href="http://portalsemilla.com/posts">
+                <a href="/posts">
                     <h6 class="text-center Nick_Name" style="color: rgb(19, 117, 187);">Blog</h6>
                 </a>
                 <div class="progress ml-2 mr-2  menu_progress  ">

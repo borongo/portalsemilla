@@ -4,10 +4,10 @@
             <div class="border border-0 d-flex justify-content-between sup">
                 <div class="d-flex flex-row bd-highlight  "
                      style="width: 8rem; border-radius: 2em;position: relative; left: 0; top: 0;">
-                    <a href="?pagina=avatar&id_user=1"><img :src="this.parsedUser.img_avatar"
+                    <a :href="'/home/'+this.parsedUser.id"><img :src="this.parsedUser.img_avatar"
                                                             class=" rounded-circle d-block ml-2"
                                                             style="height: 221px; width: 221px;"></a>
-                    <a href="?pagina=avatar&id_user=1"> <img class="encima rounded-circle"
+                    <a :href="'/home/'+this.parsedUser.id"> <img class="encima rounded-circle"
                                                              src="../../../img/icon/blog.png"> </a>
                     <div class=" align-items-center sep-name ">
                         <div class="justify-content-between" style="display: flex">
@@ -26,15 +26,15 @@
                 </div>
                 <div class="container-fluid med-prin d-flex flex-column  justify-content-center">
                     <div class="d-flex justify-content-center">
-                        <img class="" src="../../../img/icon/cofre1.png" width="44px" height="55px">
-                        <img class="" src="../../../img/icon/cofre2.png" width="44px" height="55px">
-                        <img class="" src="../../../img/icon/cofre3.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
                     </div>
                     <div class="d-flex justify-content-center ">
-                        <img class="" src="../../../img/icon/medallas.png" width="44px" height="55px">
-                        <img class="" src="../../../img/icon/medallas.png" width="44px" height="55px">
-                        <img class="" src="../../../img/icon/medallas.png" width="44px" height="55px">
-                        <img class="" src="../../../img/icon/medallas.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
+                        <img class="" src="../../../img/icon/medallas_vacia.png" width="44px" height="55px">
                     </div>
                 </div>
 
@@ -54,38 +54,38 @@
 
                 <div class="card d-flex flex-row bd-highlight contenedor-icons">
 
-                    <a href="?pagina=videos"> <img class="icons-pos rounded-circle " src="../../../img/icon/cam2.png"
+                    <a href="/videos"> <img class="icons-pos rounded-circle " src="../../../img/icon/cam.png"
                                                    alt="" width="43px" height="43px"></a>
-                    <a href="?pagina=desafio"> <img class="icons-pos rounded-circle" src="../../../img/icon/rompe2.png"
+                    <a href="/desafio"> <img class="icons-pos rounded-circle" src="../../../img/icon/rompe.png"
                                                     alt="" width="43px" height="43px"> </a>
-                    <img class="icons-pos  rounded-circle" src="../../../img/icon/cup2.png" alt="" width="43px"
+                    <img class="icons-pos  rounded-circle" src="../../../img/icon/cup.png" alt="" width="43px"
                          height="43px">
-                    <a href="?pagina=blog&id_user=1"> <img class="icons-pos  rounded-circle"
-                                                           src="../../../img/icon/blog2.png" alt="" width="43px"
+                    <a href="/posts"> <img class="icons-pos  rounded-circle"
+                                                           src="../../../img/icon/blog.png" alt="" width="43px"
                                                            height="43px"></a>
 
                 </div>
 
                 <div class="card d-flex flex-row bd-highlight contenedor-icons">
 
-                    <a href="?pagina=videos"> <img class="icons-pos" src="../../../img/icon/cam.png" alt="" width="43px"
+                    <a href="/videos"> <img class="icons-pos" src="../../../img/icon/cam.png" alt="" width="43px"
                                                    height="43px"></a>
-                    <a href="?pagina=desafio"> <img class="icons-pos " src="../../../img/icon/rompe.png" alt=""
+                    <a href="/desafio"> <img class="icons-pos " src="../../../img/icon/rompe.png" alt=""
                                                     width="43px" height="43px"></a>
                     <img class="icons-pos" src="../../../img/icon/cup.png" alt="" width="43px" height="43px">
-                    <a href="?pagina=blog&id_user=1"> <img class="icons-pos" src="../../../img/icon/blog.png" alt=""
+                    <a href="/posts]"> <img class="icons-pos" src="../../../img/icon/blog.png" alt=""
                                                            width="43px" height="43px"></a>
 
                 </div>
 
                 <div class="card d-flex flex-row bd-highlight contenedor-icons">
 
-                    <a href="?pagina=videos"> <img class="icons-pos" src="../../../img/icon/cam.png" alt="" width="43px"
+                    <a href="/videos"> <img class="icons-pos" src="../../../img/icon/cam.png" alt="" width="43px"
                                                    height="43px"></a>
-                    <a href="?pagina=desafio"> <img class="icons-pos" src="../../../img/icon/rompe.png" alt=""
+                    <a href="/desafio"> <img class="icons-pos" src="../../../img/icon/rompe.png" alt=""
                                                     width="43px" height="43px"></a>
                     <img class="icons-pos" src="../../../img/icon/cup.png" alt="" width="43px" height="43px">
-                    <a href="?pagina=blog&id_user=1"> <img class="icons-pos" src="../../../img/icon/blog.png" alt=""
+                    <a href="/posts"> <img class="icons-pos" src="../../../img/icon/blog.png" alt=""
                                                            width="43px" height="43px"></a>
 
                 </div>
@@ -120,33 +120,38 @@
                         </div>
                     </div>
 
-                    <div>
-                        <nav aria-label=" ... ">
-                            <ul class="pagination ">
-                                <li class="page-item ">
-                                    <a class="page-link card-us border-0 text-dark rounded-circle" href=""
-                                       tabindex="-1 ">
-                                        <</a>
-                                </li>
+                            <div>
 
-                                <li class="page-item ">
-                                    <a class="page-link card-us border-0 text-dark rounded-circle">paigna</a>
-                                </li>
+                                    <!--<ul class="pagination ">
+                                        <li class="page-item ">
+                                            <a class="page-link card-us border-0 text-dark rounded-circle" href=""
+                                               tabindex="-1 ">
+                                                <</a>
+                                        </li>
 
-                                <li class="page-item">
-                                    <a class="page-link card-us border-0 text-dark rounded-circle" href="">></a>
-                                </li>
-                            </ul>
-                        </nav>
+                                        <li class="page-item ">
+                                            <a class="page-link card-us border-0 text-dark rounded-circle">paigna</a>
+                                        </li>
 
-                    </div>
+                                        <li class="page-item">
+                                            <a class="page-link card-us border-0 text-dark rounded-circle" href="">></a>
+                                        </li>
+                                    </ul>-->
+                                    <div v-html="paginacion">
+
+                                    </div>
+
+
+
+
+                            </div>
                 </div>
 
 
                 <div class="mejores d-flex shadow"></div>
 
                 <div class="row row-cols-6 content-card upe overflow-auto">
-                    <div class="col card-s  card-columns" v-for="user in JSON.parse(users)">
+                    <div class="col card-s  card-columns" v-for="user in JSON.parse(users).data">
                         <!--card base-->
                         <div class="card justify-content-center border-0 card-us "
                              style="width: 6rem; border-radius: 2em ">
@@ -186,7 +191,7 @@
 <script>
     export default {
         name: "inicio",
-        props: ['users', 'user'],
+        props: ['users', 'user','paginacion'],
         data() {
             return {
                 parsedUser: undefined

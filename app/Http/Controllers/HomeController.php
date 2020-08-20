@@ -17,7 +17,7 @@ class HomeController extends Controller
     {
       $users= ["users"=>User::with(['avances'=>function($query){
            return $query->join('desafio','desafio.id',"=","avance.id_avance");
-       }])->get(),"user"=>User::with(['avances'=>function($query){
+       }])->paginate(18),"user"=>User::with(['avances'=>function($query){
           return $query->join('desafio','desafio.id',"=","avance.id_avance");
       }])->where('user.id',Auth::id())->first()];
         return view('home',compact('users'));

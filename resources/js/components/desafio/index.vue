@@ -8,21 +8,21 @@
             <div class="d-flex justify-content-center menu-st">
 
                 <div class="card justify-content-center border-0 card-us " style="width: 6rem; border-radius: 2em ">
-                    <a href="?pagina=videos">
+                    <a href="/videos">
                         <h6 class="text-center Nick_Name videos-title-menu " style="color: rgb(206, 206, 206);">
                             Videos</h6>
                     </a>
                     <div class="progress ml-2 mr-2  menu_progress  ">
                         <div class="progress-bar " role="progressbar "
-                             style="width:10%; background-color: rgb(206, 206, 206);" aria-valuenow="100 "
+                             style="width:0%; background-color: rgb(206, 206, 206);" aria-valuenow="100 "
                              aria-valuemin="0 " aria-valuemax="100 "></div>
                     </div>
-                    <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">50% </p>
+                    <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">0% </p>
                 </div>
 
                 <div class="card justify-content-center border-0 card-us "
                      style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-                    <a href="?pagina=desafio">
+                    <a href="/desafio">
                         <h6 class="text-center Nick_Name" style="color: rgb(111, 131, 234);">Desafios</h6>
                     </a>
                     <div class="progress ml-2 mr-2  menu_progress  ">
@@ -30,7 +30,7 @@
                              style="width:23%;background-color: rgb(111, 131, 234);" aria-valuenow="100 "
                              aria-valuemin="0 " aria-valuemax="100 "></div>
                     </div>
-                    <p class="text-centert porcentaje-tv">70% </p>
+                    <p class="text-centert porcentaje-tv">0% </p>
                 </div>
 
                 <div class="card justify-content-center border-0 card-us "
@@ -41,12 +41,12 @@
                              style="width:4%; background-color: rgb(206, 206, 206);" aria-valuenow="100 "
                              aria-valuemin="0 " aria-valuemax="100 "></div>
                     </div>
-                    <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">5% </p>
+                    <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">0% </p>
                 </div>
 
                 <div class="card justify-content-center border-0 card-us "
                      style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-                    <a href="?pagina=blog">
+                    <a href="/posts">
                         <h6 class="text-center Nick_Name" style="color: rgb(206, 206, 206);">Blog</h6>
                     </a>
                     <div class="progress ml-2 mr-2  menu_progress  ">
@@ -54,7 +54,7 @@
                              style="width:6%; background-color: rgb(206, 206, 206);" aria-valuenow="100 "
                              aria-valuemin="0 " aria-valuemax="100 "></div>
                     </div>
-                    <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">9% </p>
+                    <p class="text-centert porcentaje-tv" style="color: rgb(206, 206, 206);">% </p>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus,
                     recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos
                     sequi tenetur quae accusamus, quidem ipsa.</p>
-                <div name="desafio19"><img src="../../../img/per1.png" alt=""></div>
+                <div name="desafio19"><a :href="desafios[0].link_insta" target="_blank"><img src="../../../img/per1.png" alt=""></a></div>
                 <input type="text" :id="desafios[0].id" :name="desafios[0].nombre" v-model="desafios[0].link_insta">
             </div>
             <div class="d-flex justify-content-end align-items-end mb-5 mr-5 pr-4 Publicar " style="padding-top:330">
@@ -103,7 +103,7 @@
                     sequi tenetur quae accusamus, quidem ipsa.</p>
 
                 <div name="desafio19">
-                    <img src="../../../img/per1.png" alt="">
+                    <a :href="desafios[0].link_insta" target="_blank">  <img src="../../../img/per1.png" alt=""> </a>
 
                 </div>
                 <input type="text" :id="desafios[1].id" :name="desafios[1].nombre" v-model="desafios[1].link_insta">
@@ -123,7 +123,7 @@
                     recusandae aspernatur illum facilis reprehenderit praesentium assumenda harum ipsa quaerat. Quos
                     sequi tenetur quae accusamus, quidem ipsa.</p>
                 <div name="desafio19">
-                    <img src="../../../img/per1.png" alt="">
+                    <a :href="desafios[2].link_insta" target="_blank">  <img src="../../../img/per1.png" alt=""></a>
                 </div>
                 <input type="text" :id="desafios[2].id" :name="desafios[2].nombre" v-model="desafios[2].link_insta">
             </div>

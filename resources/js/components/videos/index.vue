@@ -7,15 +7,15 @@
         <div class="d-flex justify-content-center menu-st">
 
             <div class="card justify-content-center border-0 card-us " style="width: 6rem; border-radius: 2em ">
-                <a href="?pagina=videos">    <h6 class="text-center Nick_Name videos-title-menu">Videos</h6></a>
+                <a href="/videos">    <h6 class="text-center Nick_Name videos-title-menu">Videos</h6></a>
                 <div class="progress ml-2 mr-2  menu_progress  ">
                     <div class="progress-bar " role="progressbar " style="25%; background-color: rgb(200, 154, 55);" aria-valuenow="100 " aria-valuemin="0 " aria-valuemax="100 "></div>
             </div>
-            <p class="text-centert porcentaje-tv">porcentaje  </p>
+            <p class="text-centert porcentaje-tv">  </p>
         </div>
 
         <div class="card justify-content-center border-0 card-us " style="width: 6rem; border-radius: 2em ; margin-left:130px;">
-            <a href="?pagina=desafio">           <h6 class="text-center Nick_Name" style="color: rgb(206, 206, 206);">Desafios</h6></a>
+            <a href="/desafio">           <h6 class="text-center Nick_Name" style="color: rgb(206, 206, 206);">Desafios</h6></a>
             <div class="progress ml-2 mr-2  menu_progress  ">
                 <div class="progress-bar" role="progressbar " style="width:25% ;background-color: rgb(206, 206, 206);" aria-valuenow="100 " aria-valuemin="0 " aria-valuemax="100 "></div>
         </div>
@@ -42,7 +42,7 @@
 
     </div>
 
-    <div class="container text-center border cont-vidt  ">
+    <div class="container text-center border cont-vidt " style="margin-top: 130px">
 
 
         <p class="mt-4 ml-4 Cofre_1" style="text-align: initial !important;"></p>
