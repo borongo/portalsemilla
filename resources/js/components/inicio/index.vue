@@ -110,9 +110,13 @@
                                    style="border-radius: 1em 0em 0em 1em; ">
                             <select class="form-control border-0 " style="border-radius: 0em 0em 0em 0em; " name=" "
                                     id=" ">
-                                <option class="Logro">Desafio 1</option>
-                                <option class="Logro">Desafio 2</option>
-                                <option class="Logro">Desafio 3</option>
+                                <option class="Logro">Blog</option>
+                                <option class="Logro">Juego</option>
+                                <option class="Logro">Video</option>
+                                <option class="Logro">Desafio</option>
+                                <option class="Logro">Cofre 1</option>
+                                <option class="Logro">Cofre 2</option>
+                                <option class="Logro">Cofre 3</option>
                             </select>
                             <button type="submit " id="boton" class="btn btn-light border-0 "
                                     style="border-radius: 0em 1em 1em 0em; "><img src="../../../img/icon/lupa.png"
@@ -122,21 +126,6 @@
 
                             <div>
 
-                                    <!--<ul class="pagination ">
-                                        <li class="page-item ">
-                                            <a class="page-link card-us border-0 text-dark rounded-circle" href=""
-                                               tabindex="-1 ">
-                                                <</a>
-                                        </li>
-
-                                        <li class="page-item ">
-                                            <a class="page-link card-us border-0 text-dark rounded-circle">paigna</a>
-                                        </li>
-
-                                        <li class="page-item">
-                                            <a class="page-link card-us border-0 text-dark rounded-circle" href="">></a>
-                                        </li>
-                                    </ul>-->
                                     <div v-html="paginacion">
 
                                     </div>

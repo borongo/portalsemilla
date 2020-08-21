@@ -59,6 +59,7 @@
             </div>
         </div>
         <div class="container text-center border cont-desafi  ">
+
             <p class="mt-4 ml-4 Cofre_1" style="margin-righ:-40px;text-align: initial !important;"></p>
             <div class="d-flex flex-column justify-content-start video-inter">
 
@@ -81,6 +82,9 @@
 
         <div class="container justify-content-start d-flex flex-row border cont-desa1 ">
 
+            <div class="d-flex flex-row bd-highlight  " style="width: 8rem; border-radius: 2em;position: relative; left: 0; top: 0;">
+                <img  class="encima-desafio rounded-circle" src="../../../img/icon/estrella_check.png">
+            </diV>
             <div class="mt-4  desaconte ml-5 pl-5 ">
                 <p class="tt-video"> Link a Instagram</p><br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus,
@@ -95,6 +99,10 @@
         </div>
 
         <div class="container justify-content-start d-flex flex-row border cont-desa1 ">
+
+            <div class="d-flex flex-row bd-highlight  " style="width: 8rem; border-radius: 2em;position: relative; left: 0; top: 0;">
+                <img  class="encima-desafio rounded-circle" src="../../../img/icon/estrella_check.png">
+            </diV>
 
             <div class="mt-4  desaconte ml-5 pl-5 ">
                 <p class="tt-video"> Link a Instagram</p><br>
@@ -116,7 +124,9 @@
 
         </div>
         <div class="container justify-content-start d-flex flex-row border cont-desa1 ">
-
+            <div class="d-flex flex-row bd-highlight  " style="width: 8rem; border-radius: 2em;position: relative; left: 0; top: 0;">
+                <img  class="encima-desafio rounded-circle" src="../../../img/icon/estrella_check.png">
+            </diV>
             <div class="mt-4  desaconte ml-5 pl-5 ">
                 <p class="tt-video"> Link a Instagram</p><br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem voluptate hic ducimus,

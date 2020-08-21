@@ -30,3 +30,4 @@ Route::resource('desafio','DesafioController')->middleware(['auth']);
 Route::get("insdesafio","DesafioController@indDesafio")->middleware(['auth']);
 Route::resource('videos','VideosController')->middleware(['auth']);
 Route::resource('home','HomeController')->middleware(['auth']);
+Route::resource('juegos','JuegosController')->middleware(['auth']);

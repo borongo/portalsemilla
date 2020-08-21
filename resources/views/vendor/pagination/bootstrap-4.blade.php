@@ -14,7 +14,7 @@
 
             {{-- Pagination Elements --}}
             <li class=" ">
-                <a class="page-link card-us border-0 text-dark rounded-circle">{{ $page ?? '' }}</a>
+                <a class="page-link card-us border-0 text-dark rounded-circle">{{ $page ?? ''}}</a>
             </li>
 
             {{-- Next Page Link --}}

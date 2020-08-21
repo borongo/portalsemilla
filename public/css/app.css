@@ -11556,6 +11556,15 @@ menu-st {
   z-index: 1;
 }
 
+.encima-desafio {
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  top: 15rem;
+  left: -50px;
+  z-index: 1;
+}
+
 .contenido-vid-der {
   margin-top: 40px;
   margin-left: 80px;

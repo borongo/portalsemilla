@@ -2487,6 +2487,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
@@ -3376,17 +3386,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "inicio",
   props: ['users', 'user', 'paginacion'],
@@ -3414,7 +3413,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
 //
 //
 //
@@ -3595,7 +3593,9 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('videos', {
         id: id
       }).then(function (res) {
-        _this.videosState[res.data.id_desafio].completed = true;
+        _this.videosState.find(function (p) {
+          return p.id === res.data.id_desafio;
+        }).completed = true;
       });
     }
   }
@@ -40666,6 +40666,8 @@ var render = function() {
           "container justify-content-start d-flex flex-row border cont-desa1 "
       },
       [
+        _vm._m(3),
+        _vm._v(" "),
         _c("div", { staticClass: "mt-4  desaconte ml-5 pl-5 " }, [
           _c("p", { staticClass: "tt-video" }, [_vm._v(" Link a Instagram")]),
           _c("br"),
@@ -40746,6 +40748,8 @@ var render = function() {
           "container justify-content-start d-flex flex-row border cont-desa1 "
       },
       [
+        _vm._m(4),
+        _vm._v(" "),
         _c("div", { staticClass: "mt-4  desaconte ml-5 pl-5 " }, [
           _c("p", { staticClass: "tt-video" }, [_vm._v(" Link a Instagram")]),
           _c("br"),
@@ -40826,6 +40830,8 @@ var render = function() {
           "container justify-content-start d-flex flex-row border cont-desa1 "
       },
       [
+        _vm._m(5),
+        _vm._v(" "),
         _c("div", { staticClass: "mt-4  desaconte ml-5 pl-5 " }, [
           _c("p", { staticClass: "tt-video" }, [_vm._v(" Link a Instagram")]),
           _c("br"),
@@ -41166,6 +41172,78 @@ var staticRenderFns = [
             )
           ]
         )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "d-flex flex-row bd-highlight  ",
+        staticStyle: {
+          width: "8rem",
+          "border-radius": "2em",
+          position: "relative",
+          left: "0",
+          top: "0"
+        }
+      },
+      [
+        _c("img", {
+          staticClass: "encima-desafio rounded-circle",
+          attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "d-flex flex-row bd-highlight  ",
+        staticStyle: {
+          width: "8rem",
+          "border-radius": "2em",
+          position: "relative",
+          left: "0",
+          top: "0"
+        }
+      },
+      [
+        _c("img", {
+          staticClass: "encima-desafio rounded-circle",
+          attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "d-flex flex-row bd-highlight  ",
+        staticStyle: {
+          width: "8rem",
+          "border-radius": "2em",
+          position: "relative",
+          left: "0",
+          top: "0"
+        }
+      },
+      [
+        _c("img", {
+          staticClass: "encima-desafio rounded-circle",
+          attrs: { src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png") }
+        })
       ]
     )
   }
@@ -43582,11 +43660,19 @@ var staticRenderFns = [
             attrs: { name: " ", id: " " }
           },
           [
-            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio 1")]),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Blog")]),
             _vm._v(" "),
-            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio 2")]),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Juego")]),
             _vm._v(" "),
-            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio 3")])
+            _c("option", { staticClass: "Logro" }, [_vm._v("Video")]),
+            _vm._v(" "),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Desafio")]),
+            _vm._v(" "),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Cofre 1")]),
+            _vm._v(" "),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Cofre 2")]),
+            _vm._v(" "),
+            _c("option", { staticClass: "Logro" }, [_vm._v("Cofre 3")])
           ]
         ),
         _vm._v(" "),
@@ -43709,23 +43795,29 @@ var render = function() {
           "div",
           { staticClass: "d-flex justify-content-start contenido-vid-der" },
           [
-            _c("iframe", {
-              attrs: {
-                id: "1",
-                width: "702",
-                height: "400",
-                src: "https://www.youtube.com/embed/r2kBf8EiAAQ",
-                frameborder: "0",
-                allow:
-                  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                allowfullscreen: ""
-              },
-              on: {
-                click: function($event) {
-                  return _vm.saveVideo(this.videosState[0].id)
+            _c(
+              "a",
+              {
+                attrs: {
+                  target: "_blank",
+                  href: "https://www.youtube.com/embed/r2kBf8EiAAQ"
                 }
-              }
-            })
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__(/*! ../../../img/video1.png */ "./resources/img/video1.png"),
+                    width: "702",
+                    height: "400"
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.saveVideo(_vm.videosState[0].id)
+                    }
+                  }
+                })
+              ]
+            )
           ]
         )
       ]
@@ -43768,30 +43860,32 @@ var render = function() {
           "div",
           { staticClass: "d-flex justify-content-start contenido-vid-der" },
           [
-            _c(
-              "div",
-              {
-                on: {
-                  click: function($event) {
-                    return _vm.saveVideo(this.videosState[1].id)
-                  }
-                }
-              },
-              [
-                _c("iframe", {
+            _c("div", [
+              _c(
+                "a",
+                {
                   attrs: {
                     id: "2",
-                    width: "702",
-                    height: "400",
-                    src: "https://www.youtube.com/embed/RY47DjD-jbU",
-                    frameborder: "0",
-                    allow:
-                      "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                    allowfullscreen: ""
+                    target: "_blank",
+                    href: "https://www.youtube.com/embed/RY47DjD-jbU"
                   }
-                })
-              ]
-            )
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../img/video2.png */ "./resources/img/video2.png"),
+                      width: "702",
+                      height: "400"
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.saveVideo(_vm.videosState[1].id)
+                      }
+                    }
+                  })
+                ]
+              )
+            ])
           ]
         )
       ]
@@ -43821,6 +43915,7 @@ var render = function() {
               ? _c("img", {
                   staticClass: "encima-video1 rounded-circle",
                   attrs: {
+                    id: "3",
                     src: __webpack_require__(/*! ../../../img/icon/estrella_check.png */ "./resources/img/icon/estrella_check.png")
                   }
                 })
@@ -43834,23 +43929,30 @@ var render = function() {
           "div",
           { staticClass: "d-flex justify-content-start contenido-vid-der" },
           [
-            _c("iframe", {
-              attrs: {
-                id: "3",
-                width: "702",
-                height: "400",
-                src: "https://www.youtube.com/embed/nXyT_niBByU",
-                frameborder: "0",
-                allow:
-                  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                allowfullscreen: ""
-              },
-              on: {
-                click: function($event) {
-                  return _vm.saveVideo(this.videosState[2].id)
+            _c(
+              "a",
+              {
+                attrs: {
+                  target: "_blank",
+                  href: "https://www.youtube.com/embed/r2kBf8EiAAQ"
                 }
-              }
-            })
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    id: "1",
+                    src: __webpack_require__(/*! ../../../img/video3.png */ "./resources/img/video3.png"),
+                    width: "702",
+                    height: "400"
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.saveVideo(_vm.videosState[2].id)
+                    }
+                  }
+                })
+              ]
+            )
           ]
         )
       ]
@@ -56564,6 +56666,39 @@ module.exports = "/images/img.png?78f2d20741047498a593790914f95ef5";
 /***/ (function(module, exports) {
 
 module.exports = "/images/per1.png?9a7ff773088428507007803f6377984e";
+
+/***/ }),
+
+/***/ "./resources/img/video1.png":
+/*!**********************************!*\
+  !*** ./resources/img/video1.png ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/video1.png?e34d84a9d2e7f409ef836248ca9c8333";
+
+/***/ }),
+
+/***/ "./resources/img/video2.png":
+/*!**********************************!*\
+  !*** ./resources/img/video2.png ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/video2.png?dc0db7ff19a462680a7446b10c5eb354";
+
+/***/ }),
+
+/***/ "./resources/img/video3.png":
+/*!**********************************!*\
+  !*** ./resources/img/video3.png ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/video3.png?9c4360230142bab76a4dfdda9147dd36";
 
 /***/ }),
 

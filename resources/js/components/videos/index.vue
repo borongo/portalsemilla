@@ -77,9 +77,8 @@
 
         </div>
 
-        <div class="d-flex justify-content-start contenido-vid-der" >
-
-            <iframe id="1" v-on:click="saveVideo(this.videosState[0].id)" width="702" height="400" src="https://www.youtube.com/embed/r2kBf8EiAAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="d-flex justify-content-start contenido-vid-der" >
+              <a  target="_blank" href="https://www.youtube.com/embed/r2kBf8EiAAQ"> <img  v-on:click="saveVideo(videosState[0].id)" src="../../../img/video1.png"  width="702" height="400"> </a>
 
         </div>
 
@@ -99,8 +98,8 @@
 
         </div>
         <div class="d-flex justify-content-start contenido-vid-der" >
-            <div  v-on:click="saveVideo(this.videosState[1].id)">
-                <iframe id="2" width="702" height="400" src="https://www.youtube.com/embed/RY47DjD-jbU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div >
+                <a  id ="2" target="_blank" href="https://www.youtube.com/embed/RY47DjD-jbU">  <img v-on:click="saveVideo(videosState[1].id)" src="../../../img/video2.png"  width="702" height="400"> </a>
             </div>
         </div>
     </div>
@@ -108,7 +107,7 @@
     <div class="container justify-content-start d-flex flex-row border cont-vid1  ">
 
         <div class="d-flex flex-row bd-highlight  " style="width: 8rem; border-radius: 2em;position: relative; left: 0; top: 0;">
-            <img v-if="this.videosState[2].completed" class="encima-video1 rounded-circle" src="../../../img/icon/estrella_check.png">
+            <img id="3" v-if="this.videosState[2].completed" class="encima-video1 rounded-circle" src="../../../img/icon/estrella_check.png">
         </diV>
 
         <div class="mt-4 d-flex flex-column numconte justify-content-start" >
@@ -120,7 +119,7 @@
 
         <div class="d-flex justify-content-start contenido-vid-der" >
 
-            <iframe id="3" v-on:click="saveVideo(this.videosState[2].id)" width="702" height="400" src="https://www.youtube.com/embed/nXyT_niBByU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a  target="_blank" href="https://www.youtube.com/embed/r2kBf8EiAAQ">  <img v-on:click="saveVideo(videosState[2].id)"  id="1" src="../../../img/video3.png"  width="702" height="400"> </a>
 
         </div>
 
@@ -164,9 +163,12 @@ export default {
     },
     methods:{
         saveVideo(id){
+
             axios.post('videos',{id:id}).then(res=>{
-               this.videosState[res.data.id_desafio].completed=true;
+               this.videosState.find(p=>p.id===res.data.id_desafio).completed=true;
+
             })
+
         }
     }
 
